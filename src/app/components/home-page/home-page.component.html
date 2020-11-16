@@ -1,0 +1,45 @@
+<!--header-->
+  <mat-toolbar class="custom-toolbar">
+    <a mat-button class="logo" href="#"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+
+    <div class="spacer"></div>
+
+    <a mat-button href="#"> About us </a>
+    <a mat-button href="#"> Facilities </a>
+    <a mat-button href="#"> Championship </a>
+    <a mat-button href="#">
+      <mat-icon>person_outline</mat-icon>Login</a>
+  </mat-toolbar>
+
+<!--body-->
+<div class="bg1"></div>
+
+<mat-card id="card1">
+  <mat-card-content>ACHIEVING HEALTH</mat-card-content>
+</mat-card>
+
+<div class="bg2"></div>
+
+<mat-card id="card2">
+  <mat-card-header>
+    <mat-card-title><b>IT'S NOT THE TEAM WITH<br>
+      THE BEST PLAYERS THAT WINS.<br>
+      IT'S THE PLAYERS WITH<br>
+      THE BEST TEAM THAT WIN!</b></mat-card-title>
+  </mat-card-header>
+</mat-card>
+
+<!--return-to-top-arrow-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+  <button type="button" class="btn active" data-toggle="button" aria-pressed="true" (click)="scrollToTop()">
+    <i class="fas fa-chevron-up" ></i>
+  </button>
+</div>
+
+<!--footer-->
+<footer>
+  <mat-toolbar>
+    <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
+  </mat-toolbar>
+</footer>

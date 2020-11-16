@@ -1,0 +1,3 @@
+mat-toolbar, div.cdk-overlay-container mat-card, mat-card-content{
+  z-index: 1001;
+}
