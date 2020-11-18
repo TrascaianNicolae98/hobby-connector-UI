@@ -73,44 +73,10 @@
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
 }
-/*------------------------------------------------*/
-/*for the mat-car not overlay on the mat-toolbar*/
-mat-toolbar, div.cdk-overlay-container mat-card {
+/*for the mat-card not overlay on the mat-toolbar*/
+mat-toolbar, button, div.cdk-overlay-container mat-card {
   z-index: 1001;
 }
-/*------------------------------------------------*/
-/*return-to-top arrow*/
-.scroll-to-top {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  opacity: 0;
-  transition: all .2s ease-in-out;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
-}
-.show-scrollTop {
-  opacity: 1;
-  transition: all .2s ease-in-out;
-  border-radius: 20px;
-}
-
-.btn {
-  border: none;
-  border-radius: 100%;
-  font-size: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  cursor: pointer;
-  padding: 5px 10px;
-  outline: none;
-}
-
-.btn:hover{
-  background-color:rgba(0, 0, 0, 1); ;
-}
-/*------------------------------------------------*/
 /*footer*/
 .footer{
   width: 100%;

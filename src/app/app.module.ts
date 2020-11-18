@@ -9,12 +9,11 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from "@angular/material/card";
 import { HomePageComponent } from './components/home-page/home-page.component';
 import {OverlayContainer} from "@angular/cdk/overlay";
-import {DOCUMENT} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
