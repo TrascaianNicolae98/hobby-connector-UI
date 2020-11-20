@@ -9,12 +9,11 @@ import {FacilitiesService} from "../../service/facilities.service";
 })
 export class FacilitiesComponent implements OnInit {
 
-  public listOfHobbies:Array<Hobby>=new Array<Hobby>();
+  public listOfHobbies: Hobby[];
   private facilitiesService:FacilitiesService;
 
   constructor(fs: FacilitiesService) {
-    debugger
-    this.facilitiesService=fs;
+    this.facilitiesService = fs;
     this.addHobby();
 
   }
@@ -23,7 +22,6 @@ export class FacilitiesComponent implements OnInit {
 
   }
   addHobby(): void{
-      debugger
-      this.listOfHobbies=this.facilitiesService.getHobbies();
+      this.facilitiesService.getHobbies().subscribe(hobbiesList => this.listOfHobbies = hobbiesList);
   }
 }
