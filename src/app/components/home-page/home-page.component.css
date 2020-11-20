@@ -8,7 +8,7 @@
   font-size: 20px;
   background-color: transparent;
   border: solid 1px transparent;
-  border-radius: 0px;
+  border-radius: 0;
   padding: 13px 20px;
   cursor: pointer;
 }
@@ -25,7 +25,7 @@
 
 .mat-toolbar {
   position: sticky;
-  top: 0px;
+  top: 0;
   background-color: rgb(230,230,230);/*243,233,175*/
   padding: 0 5px;
   flex: 1 1 auto;
@@ -42,12 +42,12 @@
 
 .mat-card#card1{
   position: absolute;
-  top: 90%;
+  top: 87.2%;
   color: black;
   background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
   justify-content: center;
-  width: 100%;
+  width: 97.4%;
   height: 100px;
   padding-bottom: 20px;
 }
@@ -74,7 +74,7 @@
   text-align: center;
 }
 /*for the mat-card not overlay on the mat-toolbar*/
-mat-toolbar, button, div.cdk-overlay-container mat-card {
+mat-toolbar, div.cdk-overlay-container mat-card {
   z-index: 1001;
 }
 /*footer*/

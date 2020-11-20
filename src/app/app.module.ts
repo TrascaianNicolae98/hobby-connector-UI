@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {Inject, Injectable, NgModule, OnDestroy} from '@angular/core';
+import {NgModule} from '@angular/core';
 
 import {AppComponent, InAppRootOverlayContainer} from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
