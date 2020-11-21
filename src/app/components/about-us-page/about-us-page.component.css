@@ -1,0 +1,61 @@
+/*header*/
+.spacer{
+  flex: 1 1 auto;
+}
+/*------------------------------------------------*/
+.mat-button{
+  display: inline-block;
+  font-size: 20px;
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 0;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.mat-button:hover {
+  background: rgb(210,210,210);
+  color: #333;
+}
+.mat-button.logo:hover {
+  background: rgb(230,230,230);
+  color: #333;
+}
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  background-color: rgb(230,230,230);/*243,233,175*/
+  padding: 0 5px;
+  flex: 1 1 auto;
+  text-align: center;
+  overflow: auto; /*so that the background shows, no matter what*/
+}
+/*------------------------------------------------*/
+/*for the mat-card not overlay on t
+he mat-toolbar*/
+mat-toolbar, div.cdk-overlay-container mat-card {
+  z-index: 1001;
+}
+
+.mat-card#card-aboutUs {
+  position: absolute;
+  top: 55%;
+  left: 1%;
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: justify;
+}
+
+.bg-aboutUs {
+  height: 83%;
+  width: 100%;
+  background: url('tennis2.jpg') no-repeat center center/cover;
+}
+/*footer*/
+.footer{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+}
