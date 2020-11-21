@@ -1,11 +1,13 @@
 <!--header-->
   <mat-toolbar class="custom-toolbar">
-    <a mat-button class="logo" href="#"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+    <!--<a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>-->
+    <!--<a mat-button class="logo" [routerLink]=["/homePage"] routerLinkActive="mat-accent"><mat-icon>account_tree</mat-icon>Hobby Connector</a>-->
 
     <div class="spacer"></div>
 
     <a mat-button href="#"> About us </a>
-    <a mat-button href="#"> Facilities </a>
+    <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
     <a mat-button href="#"> Championship </a>
     <a mat-button href="#">
       <mat-icon>person_outline</mat-icon>Login</a>
@@ -35,3 +37,4 @@
     <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
   </mat-toolbar>
 </footer>
+
