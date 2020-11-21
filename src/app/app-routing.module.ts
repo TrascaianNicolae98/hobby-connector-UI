@@ -7,7 +7,8 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {path: 'homePage', component: HomePageComponent},
-  {path: 'facilitiesPage', component: FacilitiesComponent}
+  {path: 'facilitiesPage', component: FacilitiesComponent},
+  {path: '', redirectTo: '/homePage', pathMatch: 'full' }
 
 ];
 @NgModule({
