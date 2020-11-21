@@ -44,7 +44,7 @@
 .mat-button-facilities{
   display: inline-block;
   font-size: 20px;
-  background-color: transparent;
+  background-color: gray;
   border: solid 1px transparent;
   border-radius: 0;
   padding: 13px 20px;
