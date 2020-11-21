@@ -1,0 +1,55 @@
+a {
+  color: black;
+}
+
+.close-button {
+  float: right;
+  font-size: 3em;
+  top: 55px;
+  right: 55px;
+}
+
+.content {
+  top: calc(50% - 250px);
+  box-sizing: content-box;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+#title {
+  font: normal normal normal 70px/1.4em raleway,sans-serif;
+  font-size: 48px;
+  line-height: .8em;
+  margin-bottom: 23px;
+  margin-top: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+span {
+  font: normal normal normal 14px/1.4em 'open sans',sans-serif;
+  font-size: 18px;
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.sign-up-text {
+  font: normal normal normal 14px/1.4em 'open sans',sans-serif;
+  color: #1EABC7;
+  font-size: 18px;
+  float: none;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.login-with-google {
+  margin-top: 50px;
+}
+
+.log-in-google-button {
+  margin-top: 20px;
+  width: 300px;
+  height: 50px;
+  background-color: lightskyblue;
+}
