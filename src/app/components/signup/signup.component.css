@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+.page {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.close-button {
+  float: right;
+  font-size: 3em;
+  right: 55px;
+  top: -100px;
+  color: black;
+}
+
+.content {
+  top: calc(50% - 300px);
+  box-sizing: content-box;
+  margin: auto;
+  margin-top: 150px;
+  width: 25%;
+  border: 3px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+}
+
+#title {
+  font: normal normal normal 24px/1.4em "Times New Roman",sans-serif;
+  color: #39729B;
+  font-size: 48px;
+  line-height: .8em;
+  margin-top: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 50px;
+}
+
+mat-form-field {
+  width: 300px;
+  font-family: "Times New Roman", sans-serif;
+  height: 90px;
+  line-height: 0;
+}
+
+mat-label {
+  font-size: 1.2em;
+}
+
+input {
+  font-size: 1.2em;
+}
+
+.log-in-button {
+  font-family: raleway, sans-serif;
+  font-weight: bold;
+  height: 50px;
+  width: 300px;
+  margin-top: 20px;
+  background-color: midnightblue;
+  color: white;
+}
+
+.already-member {
+  font-family: "Times New Roman", sans-serif;
+  font-size: 1.4em;
+}
+
+.log-in-link {
+  color: black;
+  text-decoration: underline;
+}
