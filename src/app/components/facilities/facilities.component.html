@@ -1,0 +1,30 @@
+<!--header-->
+<mat-toolbar class="custom-toolbar">
+  <a mat-button class="logo" href="#"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+  <div class="spacer"></div>
+  <a mat-button href="#"> About us </a>
+  <a mat-button href="#"> Facilities </a>
+  <a mat-button href="#"> Championship </a>
+  <a mat-button href="#">
+    <mat-icon>person_outline</mat-icon>Login</a>
+</mat-toolbar>
+
+<!--body-->
+
+<div *ngFor="let hobby of this.listOfHobbies">
+  <ul class="facilities">
+    <li>
+          <div class="bg" style="background-image: url({{hobby.image1}});" >
+            <button class="mat-button-facilities" > {{hobby.name}}</button>
+          </div>
+    </li>
+  </ul>
+</div>
+
+
+<!--footer-->
+<footer>
+  <mat-toolbar>
+    <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
+  </mat-toolbar>
+</footer>

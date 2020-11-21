@@ -1,29 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 
-import {AppComponent, InAppRootOverlayContainer} from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { AppComponent } from './app.component';
+import { FacilitiesComponent } from './components/facilities/facilities.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatCardModule} from "@angular/material/card";
-import { HomePageComponent } from './components/home-page/home-page.component';
-import {OverlayContainer} from "@angular/cdk/overlay";
+import { MatCardModule} from "@angular/material/card";
+import { HttpClientModule } from '@angular/common/http';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomePageComponent,
+    FacilitiesComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [{ provide: OverlayContainer, useClass: InAppRootOverlayContainer }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
