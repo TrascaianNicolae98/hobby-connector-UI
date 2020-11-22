@@ -10,9 +10,9 @@
 .close-button {
   float: right;
   font-size: 3em;
-  right: 55px;
-  top: -100px;
-  color: black;
+  right: 100px;
+  top: 80px;
+  color: white;
 }
 
 .content {
@@ -26,11 +26,12 @@
   padding: 10px;
   text-align: center;
   background-color: white;
+  min-width: 400px;
 }
 
 #title {
   font: normal normal normal 24px/1.4em "Times New Roman",sans-serif;
-  color: #39729B;
+  color: dimgrey;
   font-size: 48px;
   line-height: .8em;
   margin-top: 10px;
@@ -60,7 +61,7 @@ input {
   height: 50px;
   width: 300px;
   margin-top: 20px;
-  background-color: midnightblue;
+  background-color: grey;
   color: white;
 }
 

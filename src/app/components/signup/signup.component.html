@@ -30,8 +30,9 @@
         </label>
       </mat-form-field>
     </div>
-    <button mat-flat-button class="log-in-button">Log In</button>
+    <button mat-flat-button class="log-in-button">Sign Up</button>
     <br> <br>
-    <span class="already-member">Already a member? <a href="#" class="log-in-link">Log In</a></span>
+    <span class="already-member">Already a member? <a routerLink="/login" routerLinkActive="active" class="log-in-link">Log In</a></span>
   </div>
 </div>
+<router-outlet></router-outlet>
