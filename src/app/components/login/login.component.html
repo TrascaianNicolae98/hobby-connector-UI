@@ -1,0 +1,14 @@
+<a href="#"><button mat-icon-button class="close-button">&#10006;</button></a>
+<div class="content">
+  <h1 id="title">Log In</h1>
+  <div>
+    <span class="new-to-site-question">New to this site?</span>
+    <a routerLink="/signup" routerLinkActive="active" class="sign-up-text"> Sign Up</a>
+  </div>
+  <div class="login-with-google">
+    <a href="#"><button mat-flat-button class="log-in-google-button"><fa-icon [icon]="faGoogle" style="float:left"></fa-icon> Log In with Google</button></a>
+  </div>
+    <span class="or">&nbsp;&nbsp;or&nbsp;&nbsp;</span>
+  <a routerLink="/login-email" routerLinkActive="active"><button mat-flat-button class="log-in-with-email">Log In with Email</button></a>
+</div>
+<router-outlet></router-outlet>

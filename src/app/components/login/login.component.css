@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+a {
+  color: black;
+}
+
+.close-button {
+  float: right;
+  font-size: 3em;
+  top: 55px;
+  right: 55px;
+}
+
+.content {
+  top: calc(50% - 200px);
+  box-sizing: content-box;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+#title {
+  font: normal normal normal 70px/1.4em raleway,sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: .8em;
+  margin-bottom: 23px;
+  margin-top: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: midnightblue;
+}
+
+.new-to-site-question {
+  font: normal normal normal 14px/1.4em 'open sans',sans-serif;
+  font-size: 18px;
+  margin-right: 4px;
+  margin-left: 4px;
+  color: midnightblue;
+}
+
+.sign-up-text {
+  font: normal normal normal 14px/1.4em 'open sans',sans-serif;
+  color: #1EABC7;
+  font-size: 18px;
+  float: none;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.login-with-google {
+  margin-top: 50px;
+}
+
+.log-in-google-button {
+  margin-top: 20px;
+  width: 300px;
+  height: 50px;
+  color: white;
+  background-color: cornflowerblue;
+}
+
+.or {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 1.5em;
+  font-family: raleway, sans-serif;
+  font-weight: bold;
+  color: midnightblue;
+}
+
+.or:before,
+.or:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 2px solid #000;
+  margin: auto;
+}
+
+.log-in-with-email {
+  margin-top: 50px;
+  width: 300px;
+  height: 50px;
+  background: #1EABC7;
+  color: white;
+}
