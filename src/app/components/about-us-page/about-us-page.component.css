@@ -38,16 +38,60 @@ mat-toolbar, div.cdk-overlay-container mat-card {
 
 .mat-card#card-aboutUs {
   position: absolute;
-  top: 55%;
+  top: 40%;
   left: 1%;
   color: white;
   font-size: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: justify;
+  letter-spacing: 1px;
+  animation: text1 3s 1;
+
+}
+
+.mat-card span{
+  letter-spacing: 1px;
+  font-size: 30px;
+  text-transform: uppercase;
+  animation: text1 3s 1;
+
+}
+
+@keyframes text1 {
+  0% {
+    color: black;
+    margin-bottom: -40px;
+  }
+  10% {
+    letter-spacing: 10px;
+    margin-bottom: -40px;
+  }
+  90% {
+    letter-spacing: 1px;
+    margin-bottom: -40px;
+  }
+
+}
+
+
+@keyframes text2 {
+  0% {
+    color: black;
+    margin-bottom: -40px;
+  }
+  30% {
+    letter-spacing: 12px;
+    margin-bottom: -40px;
+  }
+  85% {
+    letter-spacing: 6px;
+    margin-bottom: -40px;
+  }
+
 }
 
 .bg-aboutUs {
-  height: 83%;
+  height: 77%;
   width: 100%;
   background: url('tennis2.jpg') no-repeat center center/cover;
 }
