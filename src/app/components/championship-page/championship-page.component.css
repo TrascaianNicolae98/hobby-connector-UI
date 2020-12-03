@@ -1,0 +1,76 @@
+/*header*/
+.spacer{
+  flex: 1 1 auto;
+}
+/*------------------------------------------------*/
+.mat-button{
+  display: inline-block;
+  font-size: 20px;
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 0;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.mat-button:hover {
+  background: rgb(210,210,210);
+  color: #333;
+}
+.mat-button.logo:hover {
+  background: rgb(230,230,230);
+  color: #333;
+}
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  background-color: rgb(230,230,230);/*243,233,175*/
+  padding: 0 5px;
+  flex: 1 1 auto;
+  text-align: center;
+  overflow: auto; /*so that the background shows, no matter what*/
+}
+/*------------------------------------------------*/
+
+.facilities{
+  list-style: none;
+  display:inline;
+  text-align: center;
+}
+.bg{
+  width:100%;
+  height: 50vh;
+  background-size: cover;
+  /*background: url("src/mainpage.jpg");*/
+}
+.mat-button-facilities{
+  display: inline-block;
+  font-size: 30px;
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 0;
+  padding: 13px 20px;
+  cursor: pointer;
+  margin-left: 80%;
+  margin-top: 10%;
+  color: white;
+}
+.mat-button-facilities:hover{
+  opacity: 70%;
+  background: rgb(210,210,210);
+  color: #333;
+}
+
+/*for the mat-card not overlay on t
+he mat-toolbar*/
+mat-toolbar, div.cdk-overlay-container mat-card {
+  z-index: 1001;
+}
+/*footer*/
+.footer{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+}
+

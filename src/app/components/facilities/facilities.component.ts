@@ -37,4 +37,7 @@ export class FacilitiesComponent implements OnInit {
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
   }
+  goToChampionshipPage(event): void{
+    this.router.navigate(['/championshipPage'])
+  }
 }
