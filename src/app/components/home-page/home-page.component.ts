@@ -19,4 +19,11 @@ export class HomePageComponent implements OnInit {
   goToFacilitiesPage(event): void {
     this.router.navigate(['/facilitiesPage']);
   }
+  goToAboutUsPage(event): void {
+    this.router.navigate(['/aboutUsPage']);
+  }
+  goToLoginPage(event): void {
+    this.router.navigate(['/login']);
+  }
+
 }

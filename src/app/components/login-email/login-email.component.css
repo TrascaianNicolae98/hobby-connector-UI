@@ -3,7 +3,9 @@
 a {
   color: black;
 }
-
+a:hover{
+  cursor: pointer;
+}
 .close-button {
   float: right;
   font-size: 3em;

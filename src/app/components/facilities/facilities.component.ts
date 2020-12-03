@@ -24,10 +24,17 @@ export class FacilitiesComponent implements OnInit {
   addHobby(): void{
       this.facilitiesService.getHobbies().subscribe(hobbiesList => this.listOfHobbies = hobbiesList);
   }
+
   goToHomePage(event): void {
     this.router.navigate(['/homePage']);
   }
   goToFacilitiesPage(event): void {
     this.router.navigate(['/facilitiesPage']);
+  }
+  goToAboutUsPage(event): void {
+    this.router.navigate(['/aboutUsPage']);
+  }
+  goToLoginPage(event): void {
+    this.router.navigate(['/login']);
   }
 }

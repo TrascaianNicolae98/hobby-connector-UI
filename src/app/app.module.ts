@@ -11,12 +11,24 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
+import { AboutUsPageComponent} from "./components/about-us-page/about-us-page.component";
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { LoginComponent } from './components/login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginEmailComponent } from './components/login-email/login-email.component';
+import { SignupComponent } from './components/signup/signup.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FacilitiesComponent,
-    HomePageComponent
+    HomePageComponent,
+    AboutUsPageComponent,
+    SignupComponent,
+    LoginEmailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +38,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatToolbarModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
