@@ -7,7 +7,7 @@ import { HomePageComponent} from "./components/home-page/home-page.component";
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule} from "@angular/material/card";
-import { HttpClientModule } from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginEmailComponent } from './components/login-email/login-email.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ChampionshipPageComponent } from './components/championship-page/championship-page.component';
+import {NGXLogger} from "ngx-logger";
+import {TokenInterceptor} from "./helper/interceptor";
 
 
 @NgModule({
@@ -45,7 +47,12 @@ import { ChampionshipPageComponent } from './components/championship-page/champi
     MatInputModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [NGXLogger,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

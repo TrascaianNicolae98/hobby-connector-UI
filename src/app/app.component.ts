@@ -11,8 +11,6 @@ export class AppComponent {
   title = 'hobby-connector-UI';
 }
 
-
-
 @Injectable({providedIn: 'root'})
 export class InAppRootOverlayContainer extends OverlayContainer implements OnDestroy {
   constructor(@Inject(DOCUMENT) _document: any) {
