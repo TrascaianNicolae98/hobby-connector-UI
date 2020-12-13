@@ -1,0 +1,144 @@
+/*header*/
+.spacer{
+  flex: 1 1 auto;
+}
+/*------------------------------------------------*/
+.mat-button{
+  display: inline-block;
+  font-size: 20px;
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 0;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+.mat-button:hover {
+  background: rgb(210,210,210);
+  color: #333;
+}
+.mat-button.logo:hover {
+  background: rgb(230,230,230);
+  color: #333;
+}
+.mat-toolbar {
+  position: sticky;
+  top: 0;
+  background-color: rgb(230,230,230);/*243,233,175*/
+  padding: 0 5px;
+  flex: 1 1 auto;
+  text-align: center;
+  overflow: auto; /*so that the background shows, no matter what*/
+}
+/*------------------------------------------------*/
+/*for the mat-card not overlay on t
+he mat-toolbar*/
+
+body {
+  background-image: url("tournament.jpeg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.center{
+  text-align: center;
+  color: rgba(143, 188, 143,0.5);
+  font-size: 50px;
+  font-family: "Monaco";
+  margin-top: 50px;
+}
+
+.button1 {
+  background-color: rgba(143, 188, 143,0.9);
+  border: none;
+  height: 5%;
+  width: 10%;
+  color: white;
+  text-align: center;
+  box-shadow: #333333;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+  margin-left: 10%;
+  margin-top:3%;
+}
+
+.button2 {
+  background-color: rgba(143, 188, 143,0.9);
+  border: none;
+  color: white;
+  height: 5%;
+  width: 10%;
+  text-align: center;
+  box-shadow: #333333;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vh;
+  margin-left: 15%;
+  margin-top:3%;
+}
+
+#table1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 35%;
+  height: 35%;
+  margin-left: 10%;
+  margin-top: 5%;
+  float:left;
+  overflow: hidden;
+  table-layout: fixed;
+
+}
+
+
+
+#table1 td, #table1 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table1 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
+#table1 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
+
+#table1 tr:hover {background-color: #ffffff;}
+
+#table1 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgba(143, 188, 143,0.7);
+  color: white;
+}
+
+
+#table2 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 35%;
+  height: 35%;
+  margin-left: 10%;
+  margin-top: 5%;
+  float:left;
+  overflow: hidden;
+
+}
+
+#table2 td, #table2 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table2 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
+#table2 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
+
+#table2 tr:hover {background-color: #ffffff;}
+
+#table2 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgba(143, 188, 143,0.7);
+  color: white;
+}

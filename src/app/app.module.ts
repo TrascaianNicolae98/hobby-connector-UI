@@ -19,6 +19,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginEmailComponent } from './components/login-email/login-email.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ChampionshipPageComponent } from './components/championship-page/championship-page.component';
+import { TournamentPageComponent } from './components/tournament-page/tournament-page.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ChampionshipPageComponent } from './components/championship-page/champi
     SignupComponent,
     LoginEmailComponent,
     LoginComponent,
-    ChampionshipPageComponent
+    ChampionshipPageComponent,
+    TournamentPageComponent
   ],
   imports: [
     BrowserModule,
