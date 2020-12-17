@@ -73,23 +73,6 @@ mat-toolbar, div.cdk-overlay-container mat-card {
 
 }
 
-
-@keyframes text2 {
-  0% {
-    color: black;
-    margin-bottom: -40px;
-  }
-  30% {
-    letter-spacing: 12px;
-    margin-bottom: -40px;
-  }
-  85% {
-    letter-spacing: 6px;
-    margin-bottom: -40px;
-  }
-
-}
-
 .bg-aboutUs {
   height: 77%;
   width: 100%;
