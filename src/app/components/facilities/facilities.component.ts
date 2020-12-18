@@ -40,4 +40,7 @@ export class FacilitiesComponent implements OnInit {
   goToChampionshipPage(event): void{
     this.router.navigate(['/championshipPage'])
   }
+  goToTournamentPage(event) {
+    this.router.navigate(['/tournamentPage']);
+  }
 }
