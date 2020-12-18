@@ -9,6 +9,7 @@ import {LoginEmailComponent} from "./components/login-email/login-email.componen
 import {SignupComponent} from "./components/signup/signup.component";
 import {ChampionshipPageComponent} from "./components/championship-page/championship-page.component";
 import {UserProfileComponent} from "./components/user-profile/user-profile.component";
+import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 
 
 const routes: Routes = [
@@ -19,8 +20,9 @@ const routes: Routes = [
   { path: 'login-email', component: LoginEmailComponent },
   { path: 'signup', component: SignupComponent },
   {path: '', redirectTo: '/homePage', pathMatch: 'full' },
-  {path: 'championshipPage', component:ChampionshipPageComponent},
-  {path: 'user-profile', component:UserProfileComponent}
+  {path: 'championshipPage', component: ChampionshipPageComponent},
+  {path: 'tournamentPage', component: TournamentPageComponent},
+  {path: 'user-profile', component: UserProfileComponent}
 
 ];
 @NgModule({

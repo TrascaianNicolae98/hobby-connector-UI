@@ -23,6 +23,7 @@ import { LoginEmailComponent } from './components/login-email/login-email.compon
 import { SignupComponent } from './components/signup/signup.component';
 import { ChampionshipPageComponent } from './components/championship-page/championship-page.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     LoginEmailComponent,
     LoginComponent,
     ChampionshipPageComponent,
+    TournamentPageComponent,
     UserProfileComponent
   ],
   imports: [
