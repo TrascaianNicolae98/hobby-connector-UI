@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import {Router} from "@angular/router";
+import {GoogleLoginProvider, SocialAuthService} from "angularx-social-login";
+import {SocialloginService} from "../../service/sociallogin.service";
+import {Socialusers} from "../../model/SocialUsers";
+
+
 
 @Component({
   selector: 'app-login',
@@ -9,15 +13,40 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private titleService: Title,private router: Router) {
-    this.titleService.setTitle('Login');
+  response;
+  socialusers=new Socialusers();
+  private userProfile: any;
+  constructor(
+    public OAuth: SocialAuthService,
+    private SocialloginService: SocialloginService,
+    private router: Router
+  ) { }
+  ngOnInit() {
   }
+  public socialSignIn(socialProvider: string) {
+    let socialPlatformProvider;
+    if (socialProvider === 'google') {
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+    }
+    this.OAuth.signOut(true);
+    this.OAuth.signIn(socialPlatformProvider).then(socialusers => {
+      console.log(socialProvider, socialusers);
+      console.log(socialusers);
+      this.Savesresponse(socialusers);
+    });
 
+  }
+  Savesresponse(socialusers: Socialusers) {
+    this.SocialloginService.Savesresponse(socialusers).subscribe((res: any) => {
+      console.log(res);
+      this.socialusers=res;
+      this.response = res.userDetail;
+      localStorage.setItem('socialusers', JSON.stringify( this.socialusers));
+      console.log(localStorage.setItem('socialusers', JSON.stringify(this.socialusers)));
+      this.router.navigate([`/user-profile`]);
+    })
+  }
   faGoogle = faGoogle;
-
-  ngOnInit(): void {
-  }
 
   goToLoginEmailPage(event): void {
     this.router.navigate(['/login-email']);
@@ -29,9 +58,9 @@ export class LoginComponent implements OnInit {
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
   }
-  goToLoginGooglePage(event): void {
-  }
+
   goToHomePage(event): void {
     this.router.navigate(['/homePage']);
   }
+
 }
