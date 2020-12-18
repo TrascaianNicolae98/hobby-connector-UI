@@ -20,6 +20,7 @@ import { LoginEmailComponent } from './components/login-email/login-email.compon
 import { SignupComponent } from './components/signup/signup.component';
 import { ChampionshipPageComponent } from './components/championship-page/championship-page.component';
 import { TournamentPageComponent } from './components/tournament-page/tournament-page.component';
+import {GoogleLoginProvider, SocialAuthServiceConfig} from 'angularx-social-login';
 
 
 @NgModule({
@@ -47,7 +48,22 @@ import { TournamentPageComponent } from './components/tournament-page/tournament
     MatInputModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers:  [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '505489297445-6gkt7qks96mcfts8as5ppflqe2otsk9a.apps.googleusercontent.com'
+            )
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
