@@ -54,8 +54,5 @@ export class SignupComponent implements OnInit {
      this.singUp.setFullName(fullName);
     // tslint:disable-next-line:no-debugger
      this.singUpService.signUp(this.singUp).subscribe(data => {debugger; this.loginResponse.setjwt(data.jwt); this.loginResponse.setUserId(data.userId); });
-     this.jwt = 'da';
-     this.jwt = this.loginResponse.getJwt();
-     this.loginResponse.getJwt();
   }
 }
