@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
   socialusers=new Socialusers();
   private userProfile: any;
   constructor(
-    public OAuth: SocialAuthService,
-    private SocialloginService: SocialloginService,
+    public authService: SocialAuthService,
+    private socialloginService: SocialloginService,
     private router: Router
   ) { }
   ngOnInit() {
@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
     if (socialProvider === 'google') {
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     }
-    this.OAuth.signOut(true);
-    this.OAuth.signIn(socialPlatformProvider).then(socialusers => {
+    this.authService.signOut(true);
+    this.authService.signIn(socialPlatformProvider).then(socialusers => {
       console.log(socialProvider, socialusers);
       console.log(socialusers);
       this.Savesresponse(socialusers);
@@ -37,9 +37,9 @@ export class LoginComponent implements OnInit {
 
   }
   Savesresponse(socialusers: Socialusers) {
-    this.SocialloginService.Savesresponse(socialusers).subscribe((res: any) => {
+    this.socialloginService.Savesresponse(socialusers).subscribe((res: any) => {
       console.log(res);
-      this.socialusers=res;
+      this.socialusers = res;
       this.response = res.userDetail;
       localStorage.setItem('socialusers', JSON.stringify( this.socialusers));
       console.log(localStorage.setItem('socialusers', JSON.stringify(this.socialusers)));

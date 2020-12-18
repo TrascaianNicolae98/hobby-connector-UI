@@ -26,7 +26,7 @@ export class AboutUsPageComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   goToChampionshipPage(event): void{
-    this.router.navigate(['/championshipPage'])
+    this.router.navigate(['/championshipPage']);
   }
 
 }
