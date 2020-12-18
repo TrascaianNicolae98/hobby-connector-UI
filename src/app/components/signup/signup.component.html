@@ -44,32 +44,40 @@
     <div>
       <mat-form-field appearance="fill">
         <label>
-          <input matInput placeholder="First Name">
+          <input #fNameBox
+                 (keyup.enter)="fNameSub(fNameBox.value)"
+                 (blur)="fNameSub(fNameBox.value)" matInput placeholder="First Name">
+        </label>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <label >
+          <input  #lNameBox
+                  (keyup.enter)="lNameSub(lNameBox.value)"
+                  (blur)="lNameSub(lNameBox.value)" matInput placeholder="Last Name">
         </label>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field appearance="fill">
         <label>
-          <input matInput placeholder="Last Name">
+          <input #emailBox
+                 (keyup.enter)="emailSub(emailBox.value)"
+                 (blur)="emailSub(emailBox.value)" matInput type="email" placeholder="Email">
         </label>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field appearance="fill">
         <label>
-          <input matInput type="email" placeholder="Email">
+          <input #passwordBox
+                 (keyup.enter)="passwordSub(passwordBox.value)"
+                 (blur)="passwordSub(passwordBox.value)" matInput type="password" placeholder="Password">
         </label>
       </mat-form-field>
     </div>
-    <div>
-      <mat-form-field appearance="fill">
-        <label>
-          <input matInput type="password" placeholder="Password">
-        </label>
-      </mat-form-field>
-    </div>
-    <button mat-flat-button class="log-in-button">Sign Up</button>
+    <a (click)="goToHomePage($event)"><button mat-flat-button class="log-in-button">Sign Up</button></a>
     <br> <br>
     <span class="already-member">Already a member? <a (click)="goToLoginPage($event)">Log In</a></span>
   </div>
