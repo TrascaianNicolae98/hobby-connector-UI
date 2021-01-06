@@ -12,7 +12,6 @@ import {LoginResponse} from '../../model/responses/LoginResponse';
 export class LoginEmailComponent implements OnInit {
 
   private logIn = new LogIn();
-  private loginResponse = new LoginResponse();
   constructor(private router: Router, private logInService: SocialloginService) {
   }
 
@@ -30,8 +29,7 @@ export class LoginEmailComponent implements OnInit {
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
   }
-  goToLoginGooglePage(event): void {
-  }
+
   goToForgotPasswordPage(event): void {
   }
 
@@ -44,7 +42,6 @@ export class LoginEmailComponent implements OnInit {
   }
 
   logInAcc(event) {
-    // tslint:disable-next-line:no-debugger no-unused-expression
-    this.logInService.logInAccount(this.logIn).subscribe(data => {this.loginResponse.setjwt(data.jwt); this.loginResponse.setUserId(data.userId); this.loginResponse.setEmail(data.email); this.loginResponse.setFullname(data.fullname); this.loginResponse.setPhoneNo(data.phoneNo); this.router.navigate(['/homePage']);});
+    this.logInService.logInAccount(this.logIn);
   }
 }
