@@ -24,6 +24,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ChampionshipPageComponent } from './components/championship-page/championship-page.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import {TournamentPageComponent} from './components/tournament-page/tournament-p
     MatInputModule,
     FontAwesomeModule,
     SocialLoginModule,
+    FlexLayoutModule,
   ],
   providers:  [
     {
