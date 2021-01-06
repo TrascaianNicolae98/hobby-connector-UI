@@ -14,8 +14,6 @@ export class SignupComponent implements OnInit {
   private singUp = new SingUp();
   private fName: string;
   private lName: string;
-  private jwt: string;
-  private loginResponse = new LoginResponse();
    constructor(private titleService: Title, private router: Router, private singUpService: SingUpService ) {
     this.titleService.setTitle('Sign Up');
   }
@@ -53,6 +51,6 @@ export class SignupComponent implements OnInit {
      fullName = fullName + this.lName;
      this.singUp.setFullName(fullName);
     // tslint:disable-next-line:no-debugger
-     this.singUpService.signUp(this.singUp).subscribe(data => {debugger; this.loginResponse.setjwt(data.jwt); this.loginResponse.setUserId(data.userId); });
+     this.singUpService.signUp(this.singUp).subscribe();
   }
 }

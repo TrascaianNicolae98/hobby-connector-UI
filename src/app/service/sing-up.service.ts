@@ -16,6 +16,8 @@ export class SingUpService {
   constructor(private http: HttpClient) { }
 
   public signUp(singUp: SingUp): Observable<any> {
+    // tslint:disable-next-line:no-debugger
+    debugger;
     return this.http.post<any>('http://localhost:8080/api/signUp', singUp, this.httpOptions);
   }
 }

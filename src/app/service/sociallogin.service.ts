@@ -1,17 +1,21 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {SingUp} from '../model/SingUp';
+import {Observable} from 'rxjs';
+import {LogIn} from '../model/LogIn';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocialloginService {
-url;
-  constructor(private http:HttpClient) { }
+  private httpOptions = {
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  };
+  constructor(private http: HttpClient) { }
 
-  Savesresponse(response:any)
-  {
+  public logInAccount(logIn: LogIn): Observable<any> {
+    // tslint:disable-next-line:no-debugger
     debugger;
-    this.url='http://localhost:8080/api/hobbies';
-    return this.http.post(this.url,response);
+    return this.http.post<any>('http://localhost:8080/api/loginWithAccount', logIn, this.httpOptions);
   }
 }

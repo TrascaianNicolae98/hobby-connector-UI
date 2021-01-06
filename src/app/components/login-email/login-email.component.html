@@ -42,22 +42,24 @@
   <div>
     <mat-form-field appearance="standard">
       <label>
-        <mat-label>Email</mat-label>
-        <input matInput type="email">
+        <input #emailBox
+               (keyup.enter)="emailSub(emailBox.value)"
+               (blur)="emailSub(emailBox.value)" matInput type="email" placeholder="Email">
       </label>
     </mat-form-field>
   </div>
   <div>
     <mat-form-field class="password" appearance="standard">
       <label>
-        <mat-label>Password</mat-label>
-        <input matInput type="password">
+        <input #passwordBox
+               (keyup.enter)="passwordSub(passwordBox.value)"
+               (blur)="passwordSub(passwordBox.value)" matInput type="password" placeholder="Password">
       </label>
     </mat-form-field>
   </div>
   <a (click)="goToForgotPasswordPage($event)" class="forgot-password">Forgot password?</a>
   <br>
-  <button mat-flat-button class="log-in-button">Log In</button>
+  <a (click)="logInAcc($event)"><button mat-flat-button class="log-in-button">Log In</button></a>
   <br>
   <span class="or">&nbsp;&nbsp;or log in with&nbsp;&nbsp;</span>
   <div class="login-with-google">

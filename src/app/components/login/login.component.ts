@@ -18,13 +18,13 @@ export class LoginComponent implements OnInit {
   private userProfile: any;
   constructor(
     public OAuth: SocialAuthService,
-    private SocialloginService: SocialloginService,
+   // private SocialloginService: SocialloginService,
     private router: Router
   ) { }
   ngOnInit() {
   }
-  public socialSignIn(socialProvider: string) {
-    let socialPlatformProvider;
+ public socialSignIn(socialProvider: string) {
+    /*let socialPlatformProvider;
     if (socialProvider === 'google') {
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     }
@@ -33,18 +33,19 @@ export class LoginComponent implements OnInit {
       console.log(socialProvider, socialusers);
       console.log(socialusers);
       this.Savesresponse(socialusers);
-    });
+    });*/
 
   }
+
   Savesresponse(socialusers: Socialusers) {
-    this.SocialloginService.Savesresponse(socialusers).subscribe((res: any) => {
+    /*this.SocialloginService.Savesresponse(socialusers).subscribe((res: any) => {
       console.log(res);
       this.socialusers=res;
       this.response = res.userDetail;
       localStorage.setItem('socialusers', JSON.stringify( this.socialusers));
       console.log(localStorage.setItem('socialusers', JSON.stringify(this.socialusers)));
       this.router.navigate([`/user-profile`]);
-    })
+    })*/
   }
   faGoogle = faGoogle;
 

@@ -1,13 +1,16 @@
 export class LoginResponse{
+  private id: number;
+  private fullname: string;
+  private phoneNo: string;
+  private email: string;
   private jwt: string;
-  private userId: number;
 
   getJwt(): string {
     return this.jwt;
   }
 
   getuserId(): number {
-    return this.userId;
+    return this.id;
   }
 
 
@@ -16,6 +19,18 @@ export class LoginResponse{
   }
 
   setUserId(value: number): void {
-    this.userId = value;
+    this.id = value;
+  }
+
+  setFullname(value: string): void{
+    this.fullname = value;
+  }
+
+  setPhoneNo(value: string): void{
+    this.phoneNo = value;
+  }
+
+  setEmail(value: string): void{
+    this.email = value;
   }
 }
