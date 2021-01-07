@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hobby } from 'src/app/model/Hobby';
 import {FacilitiesService} from "../../service/facilities.service";
 import {Router} from '@angular/router';
+import {User} from '../../model/User';
 
 @Component({
   selector: 'app-facilities',
@@ -11,7 +12,8 @@ import {Router} from '@angular/router';
 export class FacilitiesComponent implements OnInit {
 
   public listOfHobbies: Hobby[];
-  private facilitiesService:FacilitiesService;
+  private facilitiesService: FacilitiesService;
+  private user: string;
 
   constructor(fs: FacilitiesService,private router: Router) {
     this.facilitiesService = fs;
@@ -22,7 +24,11 @@ export class FacilitiesComponent implements OnInit {
   }
 
   addHobby(): void{
-      this.facilitiesService.getHobbies().subscribe(hobbiesList => this.listOfHobbies = hobbiesList);
+    // tslint:disable-next-line:no-debugger
+    debugger;
+    // tslint:disable-next-line:prefer-const
+    this.user = localStorage.getItem('currentUser').valueOf();
+    this.facilitiesService.getHobbies().subscribe(hobbiesList => this.listOfHobbies = hobbiesList);
   }
 
   goToHomePage(event): void {
