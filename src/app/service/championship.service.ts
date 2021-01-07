@@ -8,6 +8,7 @@ import {Championship} from "../model/Championship";
 })
 export class ChampionshipService {
 
+  private
   constructor(private http: HttpClient) { }
 
   public getChampionships(): Observable<Array<Championship>>{
