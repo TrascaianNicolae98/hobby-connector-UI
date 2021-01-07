@@ -14,6 +14,7 @@ export class SignupComponent implements OnInit {
   private singUp = new SingUp();
   private fName: string;
   private lName: string;
+  private str: string;
    constructor(private titleService: Title, private router: Router, private singUpService: SingUpService ) {
     this.titleService.setTitle('Sign Up');
   }
@@ -46,11 +47,13 @@ export class SignupComponent implements OnInit {
   }
 
   goToHomePage($event: MouseEvent) {
+    // tslint:disable-next-line:no-debugger
+     debugger;
      let fullName: string;
      fullName = this.fName + ' ';
      fullName = fullName + this.lName;
      this.singUp.setFullName(fullName);
     // tslint:disable-next-line:no-debugger
-     this.singUpService.signUp(this.singUp).subscribe();
+     this.singUpService.signUp(this.singUp).subscribe(data => {this.str = data});
   }
 }

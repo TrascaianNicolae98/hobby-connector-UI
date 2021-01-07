@@ -66,7 +66,10 @@ export class SocialloginService {
   }
 
   public logInGoogle(googleUser: any): void {
-    this.http.post<any>('http://localhost:8080/api/loginWithGoogle', googleUser.getAuthResponse().id_token, this.httpOptions).subscribe(data => {
+    // tslint:disable-next-line:no-debugger
+    debugger;
+    // tslint:disable-next-line:no-debugger
+    this.http.post<any>('http://localhost:8080/api/loginWithGoogle', googleUser.getAuthResponse().id_token, this.httpOptions).subscribe( data => {
       this.saveUserInternally(data.id, data.fullname, data.phoneNo, data.email, data.jwt);
       const ngZone = this.injector.get(NgZone);   // redirect won't work correctly unless we do this nonsense
       ngZone.run(() => {
