@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {Router} from "@angular/router";
+import {SingUp} from '../../model/SingUp';
+import {SingUpService} from '../../service/sing-up.service';
+import {LoginResponse} from '../../model/responses/LoginResponse';
 
 @Component({
   selector: 'app-signup',
@@ -8,8 +11,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
-  constructor(private titleService: Title,private router: Router) {
+  private singUp = new SingUp();
+  private fName: string;
+  private lName: string;
+  private str: string;
+   constructor(private titleService: Title, private router: Router, private singUpService: SingUpService ) {
     this.titleService.setTitle('Sign Up');
   }
 
@@ -21,5 +27,33 @@ export class SignupComponent implements OnInit {
   }
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
+  }
+
+  fNameSub(value: string) {
+    this.fName = value;
+  }
+
+
+  lNameSub(value: string) {
+    this.lName = value;
+  }
+
+  emailSub(value: string) {
+    this.singUp.setEmail(value);
+  }
+
+  passwordSub(value: string) {
+    this.singUp.setPassword(value);
+  }
+
+  goToHomePage($event: MouseEvent) {
+    // tslint:disable-next-line:no-debugger
+     debugger;
+     let fullName: string;
+     fullName = this.fName + ' ';
+     fullName = fullName + this.lName;
+     this.singUp.setFullName(fullName);
+    // tslint:disable-next-line:no-debugger
+     this.singUpService.signUp(this.singUp).subscribe(data => {this.str = data});
   }
 }

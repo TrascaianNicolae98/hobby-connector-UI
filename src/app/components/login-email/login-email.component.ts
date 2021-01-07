@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
 import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import {Router} from "@angular/router";
+import {LogIn} from '../../model/LogIn';
+import {SocialloginService} from '../../service/sociallogin.service';
+import {LoginResponse} from '../../model/responses/LoginResponse';
 @Component({
   selector: 'app-login-email',
   templateUrl: './login-email.component.html',
@@ -9,8 +11,8 @@ import {Router} from "@angular/router";
 })
 export class LoginEmailComponent implements OnInit {
 
-  constructor(private titleService: Title,private router: Router) {
-    this.titleService.setTitle('Login With Email');
+  private logIn = new LogIn();
+  constructor(private router: Router, private logInService: SocialloginService) {
   }
 
   faGoogle = faGoogle;
@@ -27,8 +29,19 @@ export class LoginEmailComponent implements OnInit {
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
   }
-  goToLoginGooglePage(event): void {
-  }
+
   goToForgotPasswordPage(event): void {
+  }
+
+  passwordSub(value: string) {
+    this.logIn.setPassword(value);
+  }
+
+  emailSub(value: string) {
+    this.logIn.setEmail(value);
+  }
+
+  logInAcc(event) {
+    this.logInService.logInAccount(this.logIn);
   }
 }

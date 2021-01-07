@@ -12,7 +12,6 @@ export class FacilitiesService {
   constructor(private http: HttpClient) { }
 
   public getHobbies(): Observable<Array<Hobby>> {
-
     return this.http.get<Array<Hobby>>('http://localhost:8080/api/hobbies');
   }
 

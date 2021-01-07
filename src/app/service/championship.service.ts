@@ -12,7 +12,7 @@ export class ChampionshipService {
   constructor(private http: HttpClient) { }
 
   public getChampionships(): Observable<Array<Championship>>{
-    return this.http.get<Array<Championship>>('http://localhost:8080/api/championships')
+    return this.http.get<Array<Championship>>('http://localhost:8080/api/championships');
   }
 
 }
