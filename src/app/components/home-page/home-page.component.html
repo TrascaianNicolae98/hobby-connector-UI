@@ -1,38 +1,39 @@
-<!--header-->
-  <mat-toolbar class="custom-toolbar">
-    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
 
-    <div class="spacer"></div>
+<div class="container">
 
-    <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
-    <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
-    <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
-    <a mat-button (click)="goToLoginPage($event)">
-      <mat-icon>person_outline</mat-icon>Login</a>
-  </mat-toolbar>
+  <div class="bg1" >
+    <!--header-->
+    <mat-toolbar class="custom-toolbar" >
+      <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+      <div class="spacer"></div>
+      <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
+      <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
+      <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
+      <a mat-button (click)="goToLoginPage($event)">
+        <mat-icon>person_outline</mat-icon>Login</a>
+    </mat-toolbar>
+  </div>
 
-<!--body-->
- <div class="bg1"></div>
+  <div class="card1">
+    <h1>ACHIEVING HEALTH</h1>
+  </div>
 
-  <mat-card id="card1">
-    <mat-card-content>ACHIEVING HEALTH</mat-card-content>
-   </mat-card>
+  <div class="bg2">
+    <mat-card id="card2">
+      <mat-card-header>
+        <mat-card-title><b>IT'S NOT THE TEAM WITH<br>
+          THE BEST PLAYERS THAT WINS,<br>
+          BUT THE PLAYERS WITH<br>
+          THE BEST TEAM THAT WIN!</b></mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+  <!--footer-->
 
- <div class="bg2"></div>
+  <div class="footer">
+    <mat-toolbar>
+      <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
+    </mat-toolbar>
+  </div>
 
- <mat-card id="card2">
-  <mat-card-header>
-    <mat-card-title><b>IT'S NOT THE TEAM WITH<br>
-      THE BEST PLAYERS THAT WINS,<br>
-      BUT THE PLAYERS WITH<br>
-      THE BEST TEAM THAT WIN!</b></mat-card-title>
-   </mat-card-header>
-  </mat-card>
-
-
-<!--footer-->
-<footer>
-  <mat-toolbar>
-    <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
-  </mat-toolbar>
-</footer>
+</div>
