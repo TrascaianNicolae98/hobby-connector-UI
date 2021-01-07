@@ -1,23 +1,21 @@
-<mat-toolbar class="custom-toolbar">
-  <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
 
-  <div class="spacer"></div>
-  <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
-  <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
-  <a mat-button href="#"> Championship </a>
-  <a mat-button (click)="goToLoginPage($event)">
-    <mat-icon>person_outline</mat-icon>Login</a>
-</mat-toolbar>
 <!--body-->
 
 
-<div class="bg" style="background-image: url({{this.getClickedChampionShip().image2}});background-position: center " >
-    <h1>{{this.getClickedChampionShip().name}} Championships</h1>
+<div class="bg" style="background-image: url({{this.getClickedChampionShip().image1}});background-position: center " >
+  <mat-toolbar class="custom-toolbar">
+    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+
+    <div class="spacer"></div>
+    <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
+    <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
+    <a mat-button href="#"> Championship </a>
+    <a mat-button (click)="goToLoginPage($event)">
+      <mat-icon>person_outline</mat-icon>Login</a>
+  </mat-toolbar>
+  <h1>{{this.getClickedChampionShip().name}} Championships</h1>
+
 </div>
-
-
-
-<!--footer-->
 <footer>
   <mat-toolbar>
     <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>

@@ -33,7 +33,15 @@
 
 .bg{
   width:100%;
-  height: 50vh;
+  min-height: 100vh;
   background-size: cover;
   /*background: url("src/mainpage.jpg");*/
+}
+.footer{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+
 }

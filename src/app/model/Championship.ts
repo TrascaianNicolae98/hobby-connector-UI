@@ -47,4 +47,9 @@ export class Championship {
   get listOfTeams(): Team[] {
     return this._listOfTeams;
   }
+
+
+  set listOfTeams(value: Team[]) {
+    this._listOfTeams = value;
+  }
 }

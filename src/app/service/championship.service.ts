@@ -23,8 +23,7 @@ export class ChampionshipService {
     for (let  i = 0; i<championshipList.length;i++)
     {
       if(championshipList[i].id == id){
-        this.onClickChampionship = new Championship();
-        this.onClickChampionship = championshipList[i];
+        localStorage.setItem('currentChampionship', JSON.stringify(championshipList[i]));
         break;
       }
     }
@@ -32,6 +31,14 @@ export class ChampionshipService {
     }
 
     public getClickedChampionship():Championship{
+      const championship = JSON.parse(localStorage.getItem('currentChampionship'));
+      this.onClickChampionship=new Championship();
+      this.onClickChampionship.id=championship.id;
+      this.onClickChampionship.name=championship.name;
+      this.onClickChampionship.image1=championship.image1;
+      this.onClickChampionship.image2=championship.image2;
+      this.onClickChampionship.listOfTeams=championship.listOfTeams;
+
       return this.onClickChampionship;
   }
 }
