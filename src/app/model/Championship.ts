@@ -8,14 +8,9 @@ export class Championship {
   private _image2: string;
   private _listOfTeams: Team[]
 
-  constructor(id: number, name: string, image1: string, image2: string, listOfTeams: Team[]) {
-    this._id = id;
-    this._name = name;
-    this._image1 = image1;
-    this._image2 = image2;
-    this._listOfTeams = listOfTeams;
-
+  constructor() {
   }
+
 
   get id(): number {
     return this._id;

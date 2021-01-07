@@ -10,6 +10,7 @@ import {ChampionshipPageComponent} from "./components/championship-page/champion
 import {UserProfileComponent} from "./components/user-profile/user-profile.component";
 import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 import {AuthGuard} from './helper/Authguard';
+import {ChampionshipTournamentPageComponent} from "./components/championship-tournament-page/championship-tournament-page.component";
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/aboutUsPage', pathMatch: 'full' },
   {path: 'championshipPage', component: ChampionshipPageComponent, canActivate: [AuthGuard]},
   {path: 'tournamentPage', component: TournamentPageComponent, canActivate: [AuthGuard]},
-  {path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard]}
+  {path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard]},
+  {path: 'championshipTournament', component: ChampionshipTournamentPageComponent}
 
 ];
 @NgModule({

@@ -25,7 +25,7 @@ import { ChampionshipPageComponent } from './components/championship-page/champi
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 import { ButtonComponent } from './shared/button/button.component';
-
+import {ChampionshipTournamentPageComponent} from "./components/championship-tournament-page/championship-tournament-page.component";
 
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ import { ButtonComponent } from './shared/button/button.component';
     ChampionshipPageComponent,
     TournamentPageComponent,
     UserProfileComponent,
-    ButtonComponent
+    ButtonComponent,
+    ChampionshipTournamentPageComponent
   ],
   imports: [
     BrowserModule,
