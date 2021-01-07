@@ -3,6 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Championship} from "../model/Championship";
 import {Router} from "@angular/router";
+import {ChampionshipSlots} from "../model/ChampionshipSlots";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +12,7 @@ import {Router} from "@angular/router";
 export class ChampionshipService {
 
   private onClickChampionship : Championship
+  public championshipSlots:ChampionshipSlots;
 
   constructor(private http: HttpClient,private router: Router) { }
 
@@ -17,7 +20,7 @@ export class ChampionshipService {
     return this.http.get<Array<Championship>>('http://localhost:8080/api/championships');
   }
 
-  public onClickedChampionship(championshipList: Championship[], id: number): void{
+  public onClickedChampionship(championshipList: Championship[], id: number, lista: number[]): void{
     // tslint:disable-next-line:no-debugger
     debugger;
     for (let  i = 0; i<championshipList.length;i++)
@@ -27,6 +30,7 @@ export class ChampionshipService {
         break;
       }
     }
+    this.championshipSlots = new ChampionshipSlots(lista);
     this.router.navigate(['/championshipTournament']);
     }
 

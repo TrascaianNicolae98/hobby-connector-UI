@@ -16,6 +16,62 @@
   <h1>{{this.getClickedChampionShip().name}} Championships</h1>
 
 </div>
+
+<body>
+
+
+
+<div class="bracket">
+  <section class="round quarterfinals">
+    <div class="winners">
+      <div class="matchups">
+
+
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[0]}}</span></div>
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[1]}}</span></div>
+          </div>
+        </div>
+
+
+
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[2]}}</span></div>
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[3]}}</span></div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="winners">
+      <div class="matchups">
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[4]}}</span></div>
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[5]}}</span></div>
+          </div>
+        </div>
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[6]}}</span></div>
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[7]}}</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+
+
+</body>
+
 <footer>
   <mat-toolbar>
     <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>

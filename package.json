@@ -29,6 +29,7 @@
     "@types/jest": "^26.0.18",
     "angularx-social-login": "^3.5.4",
     "animate.css": "^4.1.1",
+    "ng-tournament-tree": "^2.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
