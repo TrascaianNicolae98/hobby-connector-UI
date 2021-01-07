@@ -6,6 +6,7 @@ import {ChampionshipService} from "../../service/championship.service";
 
 @Component({
   selector: 'app-championship-page',
+
   templateUrl: './championship-page.component.html',
   styleUrls: ['./championship-page.component.css']
 })
