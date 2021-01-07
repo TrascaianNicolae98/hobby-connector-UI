@@ -12,10 +12,8 @@ import {ChampionshipService} from "../../service/championship.service";
 export class ChampionshipPageComponent implements OnInit {
 
   public listOfChampionships: Championship[];
-  private championshipService:ChampionshipService;
 
-  constructor(cs: ChampionshipService,private router: Router) {
-    this.championshipService = cs;
+  constructor(private championshipService: ChampionshipService,private router: Router) {
     this.addChampionship();
 
   }
@@ -39,9 +37,10 @@ export class ChampionshipPageComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
+  goToChampTour(event): void {
 
-
-  goToChampTour(event):void {
-
+    // tslint:disable-next-line:no-debugger
+    debugger;
+    this.championshipService.onClickedChampionship(this.listOfChampionships, event.target.attributes.id.nodeValue);
   }
 }

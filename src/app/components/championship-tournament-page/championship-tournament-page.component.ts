@@ -26,7 +26,7 @@ export class ChampionshipTournamentPageComponent implements OnInit {
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
   }
-  public getClickedChampionShip():Championship{
+  public getClickedChampionShip(): Championship{
     return this.championshipService.getClickedChampionship();
   }
 }
