@@ -31,8 +31,9 @@
   overflow: auto; /*so that the background shows, no matter what*/
 }
 /*------------------------------------------------*/
-
- /*avatar*/
+* {
+  box-sizing: border-box;
+}
 
 .circle{
   border-radius: 50%;
@@ -41,31 +42,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5vmin;
+  font-size: 7vmin;
 }
 .initials{
   color:#FFFFFF;
-
   line-height: 20px;
   letter-spacing: 0.2625px;
   padding: 30px 25px;
-
 }
 .left-button{
-  padding: 30px 25px;
-
+  padding: 10px 5px;
+  font-size: 2.5vmin;
 }
 /*---------------------*/
-/*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  font-family: 'Josefin Sans', sans-serif;
-}*/
 
 .label{
-  font-size: 1vh;
+  font-size: 1vmin;
 }
 .left.a{
   flex: 1 1 auto;
@@ -75,9 +67,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 60vw;
-  height: 50vh;
+  width: 70vw;
+  height: 70vh;
   display: flex;
+  flex-direction: row;
   box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
 }
 .user-container .left{
@@ -85,7 +78,7 @@
   background: lightgray;
   padding: 30px 25px;
   text-align: center;
-  color: #fff;
+  color: black;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -104,74 +97,106 @@
 
 .user-container .right{
   width: 65%;
-  height: 90%;
-  /*background: #fff;*/
   background-color: #fff;
   padding: 30px 25px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .user-container .right .title /*right title*/
 {
   color: #353c4e;
-  font-size: 2vmax;
+  font-size: 4vmin;
   background-color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
   justify-content: space-around;
   text-align: center;
+
 }
 .updateButton{
-  justify-content: space-around;
-  text-align: center;
-  font-size: 2vmin;
-
-}
-.box{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  width: 30vw;
-  height: 30vw;
+  padding: 30px 25px;
+  align-self: center;
+  font-size: 2.5vmin;
 }
 
-.change-info{
-  background-color: #fff;
-  height: 50%;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 2vmin;
-
-
-}
-.column {
-  flex: auto;
-  height: 100px;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-
-}
-
-.row{
-  display: flex;
-  flex-direction: row;
+input[type=text], select, textarea {
   width: 100%;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
-  justify-content: space-between;
-  text-align: center;
-
-
-
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
+
+input[type=email] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+input[type=tel] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  font-size: 2.5vmin;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
 /*footer*/
 .footer{
   width: 100vw;

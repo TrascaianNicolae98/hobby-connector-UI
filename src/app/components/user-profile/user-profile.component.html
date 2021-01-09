@@ -23,48 +23,51 @@
       <div class="left-button">
         <a mat-stroked-button (click)="logout($event)"> Logout </a>
       </div>
+      <div class="left-button">
+        <a mat-stroked-button (click)="logout($event)">Reviews</a>
+      </div>
     </div>
 
 
     <div class="right">
        <div class="title"><h3>My account</h3></div>
-       <div class="change-info">
-          <div class="box">
-            <div class="row">
-
-              <div class="column">
-                <h4>Email</h4>
-                <label>
-                  <input [(ngModel)]="userEmail" placeholder="{{userEmail}}">
-                </label>
-              </div>
-
-              <div class="column">
-                <h4>Phone Number</h4>
-                <label>
-                  <input [(ngModel)]="userPhoneNo" placeholder="{{userPhoneNo}}">
-                </label>
-              </div>
+      <div class="container">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Name</label>
             </div>
-            <div class="row">
-                <div class="column">
-                  <h4>Change Password</h4>
-                  <label>
-                    <input [(ngModel)]="userPassword" placeholder="new password">
-                  </label>
-                </div>
-
-                <div class="column">
-                  <h4>Name</h4>
-                  <label>
-                    <input [(ngModel)]="userName"  placeholder="{{userName}}">
-                  </label>
-                </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" [(ngModel)]="userName"  placeholder="{{userName}}">
             </div>
-
           </div>
-         <div class="updateButton"><a mat-stroked-button (click)="update($event)"> Update Info </a></div>
-       </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+              <input type="email" id="email" name="email" [(ngModel)]="userEmail" placeholder="{{userEmail}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="number">Phone number</label>
+            </div>
+            <div class="col-75">
+              <input type="tel" id="number" name="phonenumber" [(ngModel)]="userPhoneNo" placeholder="{{userPhoneNo}}">
+            </div>
+          </div><div class="row">
+            <div class="col-25">
+              <label for="password">Password</label>
+            </div>
+            <div class="col-75">
+              <input type="password" id="password" name="password" [(ngModel)]="userPassword" placeholder="new password">
+            </div>
+          </div>
+
+    </div>
+      <div class="updateButton">
+        <a mat-stroked-button (click)="update($event)"> Update Info </a>
+      </div>
     </div>
   </div>
   <!---------------------------------------------------------->
