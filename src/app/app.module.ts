@@ -23,9 +23,10 @@ import { LoginEmailComponent } from './components/login-email/login-email.compon
 import { SignupComponent } from './components/signup/signup.component';
 import { ChampionshipPageComponent } from './components/championship-page/championship-page.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
+import { TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 import { ButtonComponent } from './shared/button/button.component';
-import {ChampionshipTournamentPageComponent} from "./components/championship-tournament-page/championship-tournament-page.component";
+import { ChampionshipTournamentPageComponent} from "./components/championship-tournament-page/championship-tournament-page.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import {ChampionshipTournamentPageComponent} from "./components/championship-tou
     MatInputModule,
     FontAwesomeModule,
     SocialLoginModule,
+    FormsModule,
   ],
   providers:  [
     {

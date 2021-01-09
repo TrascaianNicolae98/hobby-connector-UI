@@ -34,8 +34,14 @@ export class User{
   public setPhoneNo(phoneNo: string): void{
     this.phoneNo = phoneNo;
   }
+
+  public getPhoneNo(): string {
+    return this.phoneNo;
+  }
+
   public getInitials(): string{
     const nameSplitBySpace = this.getName().split(' ');
     return nameSplitBySpace[0][0] + nameSplitBySpace[1][0];
   }
+
 }

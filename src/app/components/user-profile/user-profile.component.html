@@ -1,1 +1,76 @@
-<button (click)="logout()" class="btn btn-outline-success my-2 my-sm-0" >Logout</button>
+<body>
+  <!--header-->
+  <mat-toolbar class="custom-toolbar">
+    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+    <div class="spacer"></div>
+    <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
+    <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
+    <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
+    <a mat-button (click)="goToProfilePage($event)">
+      <mat-icon>person_outline</mat-icon>My Profile</a>
+  </mat-toolbar>
+
+  <!-------------------------------------->
+  <div class="user-container">
+
+    <div class="left">
+      <div class="circle" [ngStyle]="{'background-color': circleColor}">
+        {{initials}}
+      </div>
+
+      <h4>{{this.profileService.getUserName()}}</h4>
+      <p>{{this.profileService.getUserEmail()}}</p>
+      <div class="left-button">
+        <a mat-stroked-button (click)="logout($event)"> Logout </a>
+      </div>
+    </div>
+
+
+    <div class="right">
+       <div class="title"><h3>My account</h3></div>
+       <div class="change-info">
+          <div class="box">
+            <div class="row">
+
+              <div class="column">
+                <h4>Email</h4>
+                <label>
+                  <input [(ngModel)]="userEmail" placeholder="{{userEmail}}">
+                </label>
+              </div>
+
+              <div class="column">
+                <h4>Phone Number</h4>
+                <label>
+                  <input [(ngModel)]="userPhoneNo" placeholder="{{userPhoneNo}}">
+                </label>
+              </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                  <h4>Change Password</h4>
+                  <label>
+                    <input [(ngModel)]="userPassword" placeholder="new password">
+                  </label>
+                </div>
+
+                <div class="column">
+                  <h4>Name</h4>
+                  <label>
+                    <input [(ngModel)]="userName"  placeholder="{{userName}}">
+                  </label>
+                </div>
+            </div>
+
+          </div>
+         <div class="updateButton"><a mat-stroked-button (click)="update($event)"> Update Info </a></div>
+       </div>
+    </div>
+  </div>
+  <!---------------------------------------------------------->
+  <footer>
+    <mat-toolbar>
+      <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
+    </mat-toolbar>
+  </footer>
+</body>
