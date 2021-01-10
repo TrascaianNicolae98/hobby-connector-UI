@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
 /*header*/
 .spacer{
   flex: 1 1 auto;
@@ -31,6 +33,8 @@
   flex: 1 1 auto;
   text-align: center;
   overflow: auto; /*so that the background shows, no matter what*/
+  font-family: 'Josefin Sans';
+
 }
 /*------------------------------------------------*/
 /*body*/
@@ -84,4 +88,6 @@ mat-toolbar, div.cdk-overlay-container mat-card {
   text-align: center;
   justify-content: center;
   font-size: 15px;
+  font-family: 'Josefin Sans';
+
 }

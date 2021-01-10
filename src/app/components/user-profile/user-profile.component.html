@@ -1,7 +1,7 @@
 <body>
   <!--header-->
   <mat-toolbar class="custom-toolbar">
-    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>HOBBY CONNECTOR</a>
     <div class="spacer"></div>
     <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
     <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
@@ -20,11 +20,13 @@
 
       <h4>{{this.profileService.getUserName()}}</h4>
       <p>{{this.profileService.getUserEmail()}}</p>
-      <div class="left-button">
-        <a mat-stroked-button (click)="logout($event)"> Logout </a>
+      <p>-{{this.profileService.getUserPhoneNo()}}-</p>
+
+      <div class="updateButton">
+        <a mat-raised-button (click)="logout($event)"> Logout </a>
       </div>
-      <div class="left-button">
-        <a mat-stroked-button (click)="logout($event)">Reviews</a>
+      <div class="updateButton">
+        <a mat-raised-button (click)="logout($event)">Reviews</a>
       </div>
     </div>
 
@@ -66,7 +68,7 @@
 
     </div>
       <div class="updateButton">
-        <a mat-stroked-button (click)="update($event)"> Update Info </a>
+        <a mat-raised-button (click)="update($event)"> Update Info </a>
       </div>
     </div>
   </div>

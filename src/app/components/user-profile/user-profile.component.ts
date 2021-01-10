@@ -31,7 +31,7 @@ export class UserProfileComponent implements OnInit {
   userPhoneNo: string;
   initials: string;
   circleColor: string;
-  colors = ['#EB7181', '#468547', '#FFD558', '#3670B2'];
+  colors = ['#ffedbf', '#468547', '#EEDD82', '#CD5C5C','#8B7355','#8B7D6B','#6E8B3D'];
 
   constructor(private loginService: SocialloginService, public profileService: ProfileService, private router: Router) {
     this.userName = profileService.getUserName();
@@ -77,7 +77,8 @@ export class UserProfileComponent implements OnInit {
   update($event: MouseEvent) {
     let user = this.loginService.getCurrentUser();
     let newUser = new User();
-    this.loginService.saveUserInternally(user.getId(), this.userName, user.getPhoneNo(), this.userEmail, user.getJwt());
+    this.loginService.saveUserInternally(user.getId(), this.userName, this.userPhoneNo, this.userEmail, user.getJwt());
     location.reload();
   }
+
 }

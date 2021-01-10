@@ -29,6 +29,7 @@
   flex: 1 1 auto;
   text-align: center;
   overflow: auto; /*so that the background shows, no matter what*/
+  font-family: 'Josefin Sans';
 }
 /*------------------------------------------------*/
 * {
@@ -43,6 +44,7 @@
   justify-content: center;
   align-items: center;
   font-size: 7vmin;
+
 }
 .initials{
   color:#FFFFFF;
@@ -72,6 +74,7 @@
   display: flex;
   flex-direction: row;
   box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
+
 }
 .user-container .left{
   width: 35%;
@@ -84,7 +87,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .user-container .left h4{
   margin-bottom: 10px;
   font-size: 3vmin;
@@ -104,26 +106,38 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: scroll;
+  overflow: auto;
+
+
 }
 ::-webkit-scrollbar {
   display: none;
+
 }
 .user-container .right .title /*right title*/
 {
   color: #353c4e;
   font-size: 4vmin;
   background-color: #fff;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   letter-spacing: 5px;
   justify-content: space-around;
   text-align: center;
-
+  font-family: 'Josefin Sans';
 }
+
 .updateButton{
-  padding: 30px 25px;
+  margin: 30px 25px;
   align-self: center;
   font-size: 2.5vmin;
+  font-family: 'Josefin Sans';
+  /*background-color: #D7CEC7;*/
+  background-color: white;
+  border: 2px solid lightgray !important;
+}
+
+.updateButton:hover{
+  background-color: grey;
 }
 
 input[type=text], select, textarea {
@@ -132,6 +146,7 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+
 }
 
 input[type=email] {
@@ -161,11 +176,15 @@ input[type=tel] {
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
+  font-family: 'Josefin Sans';
+
+
 }
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;*/
+  background-color: lightgrey;
   padding: 20px;
 }
 
@@ -199,17 +218,21 @@ label {
 
 /*footer*/
 .footer{
-  width: 100vw;
+  width: 100%;
   height: 50px;
   text-align: center;
   justify-content: center;
   font-size: 1.7vmin;
   bottom: 0%;
-  background:lightgray;
+  left: 0%;
+  background:rgb(230,230,230);
   position: fixed;
+  font-family: 'Josefin Sans';
 }
 body{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+  background: url("bike.jpg");
+  background-size: cover;
 }
 
