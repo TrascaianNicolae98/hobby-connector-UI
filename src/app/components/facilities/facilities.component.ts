@@ -3,6 +3,7 @@ import { Hobby } from 'src/app/model/Hobby';
 import {FacilitiesService} from "../../service/facilities.service";
 import {Router} from '@angular/router';
 import {User} from '../../model/User';
+import {debuglog} from "util";
 
 @Component({
   selector: 'app-facilities',
@@ -24,11 +25,8 @@ export class FacilitiesComponent implements OnInit {
   }
 
   addHobby(): void{
-    // tslint:disable-next-line:no-debugger
-    debugger;
-    // tslint:disable-next-line:prefer-const
     this.user = localStorage.getItem('currentUser').valueOf();
-    this.facilitiesService.getHobbies().subscribe(hobbiesList => this.listOfHobbies = hobbiesList);
+    this.facilitiesService.getHobbies().subscribe(  hobbiesList => {this.listOfHobbies = hobbiesList; debugger});
   }
 
   goToHomePage(event): void {
