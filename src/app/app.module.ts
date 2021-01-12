@@ -25,6 +25,11 @@ import { ChampionshipPageComponent } from './components/championship-page/champi
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { GenericDataTableComponent } from './generic-data-table/generic-data-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { Table2Component } from './table2/table2.component';
 
 
 @NgModule({
@@ -38,7 +43,9 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     LoginComponent,
     ChampionshipPageComponent,
     TournamentPageComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    GenericDataTableComponent,
+    Table2Component
   ],
   imports: [
     BrowserModule,
@@ -54,6 +61,9 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     FontAwesomeModule,
     SocialLoginModule,
     FlexLayoutModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
   ],
   providers:  [
     {

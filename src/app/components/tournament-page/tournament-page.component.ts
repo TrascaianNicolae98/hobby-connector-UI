@@ -29,6 +29,15 @@ export class TournamentPageComponent implements OnInit {
     this.router.navigate(['/championshipPage'])
   }
 
+  myFunction(tableID: string): void {
+    const table: HTMLTableElement = document.getElementById(tableID) as HTMLTableElement;
+    const row = table.insertRow(-1);
+    const cell1 = row.insertCell(0);
+    const cell2 = row.insertCell(1);
+    cell1.innerHTML = 'k';
+    cell2.innerHTML = 'k';
+  }
+
 }
 
 
