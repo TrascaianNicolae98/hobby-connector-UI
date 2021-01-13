@@ -29,6 +29,9 @@ import {ChampionshipTournamentPageComponent} from "./components/championship-tou
 import {GenericDataTableComponent} from './generic-data-table/generic-data-table.component';
 import {Table2Component} from './table2/table2.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     FontAwesomeModule,
     SocialLoginModule,
+    FlexLayoutModule,
+    MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
   ],
   providers:  [
     {
