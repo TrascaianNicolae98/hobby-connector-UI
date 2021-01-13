@@ -5,7 +5,7 @@
 /*------------------------------------------------*/
 .mat-button{
   display: inline-block;
-  font-size: 20px;
+  font-size: 2vw;
   background-color: transparent;
   border: solid 1px transparent;
   border-radius: 0;
@@ -50,36 +50,51 @@ body {
 }
 
 .button1 {
+  cursor: pointer;
   background-color: rgba(143, 188, 143,0.9);
   border: none;
-  height: 5%;
+  height: 3%;
   width: 10%;
   color: white;
   text-align: center;
   box-shadow: #333333;
   text-decoration: none;
   display: inline-block;
-  font-size: 2vh;
+  font-size: 1vw;
   margin-left: 10%;
   margin-top:3%;
 }
 
 .button2 {
+  cursor:pointer;
   background-color: rgba(143, 188, 143,0.9);
   border: none;
   color: white;
-  height: 5%;
+  height: 3%;
   width: 10%;
   text-align: center;
   box-shadow: #333333;
   text-decoration: none;
   display: inline-block;
-  font-size: 2vh;
+  font-size: 1vw;
   margin-left: 15%;
   margin-top:3%;
 }
 
-#table1 {
+.button3 {
+  background-color: rgba(143, 188, 143,0.9);
+  border: none;
+  height: 30%;
+  width: 50%;
+  color: white;
+  text-align: center;
+  margin:auto;
+  box-shadow: #333333;
+  text-decoration: none;
+  font-size: 1vw;
+}
+
+.table1 {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 35%;
@@ -90,30 +105,33 @@ body {
   overflow: hidden;
   table-layout: fixed;
 
+
 }
 
 
-
-#table1 td, #table1 th {
+.table1 td, #table1 th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#table1 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
-#table1 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
+.table1 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
+.table1 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
 
-#table1 tr:hover {background-color: #ffffff;}
 
-#table1 th {
+.table1 tr:hover {background-color: #ffffff;}
+
+.table1 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: rgba(143, 188, 143,0.7);
   color: white;
+  font-size:1.5vw;
+
 }
 
 
-#table2 {
+.table2 {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 35%;
@@ -125,20 +143,249 @@ body {
 
 }
 
-#table2 td, #table2 th {
+.table2 td, #table2 th {
   border: 1px solid #ddd;
   padding: 8px;
+  font-size:1vw;
 }
 
-#table2 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
-#table2 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
+.table2 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
+.table2 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
 
-#table2 tr:hover {background-color: #ffffff;}
+.table2 tr:hover {background-color: #ffffff;}
 
-#table2 th {
+.table2 th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: rgba(143, 188, 143,0.7);
   color: white;
+  font-size:1.5vw;
+}
+
+#table3 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  white-space: nowrap;
+  text-align: center;
+  position: center;
+  width: 50%;
+  margin-top: 2%;
+
+}
+
+#table3 td, #table3 th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table3 tr:nth-child(even){background-color: rgba(255,255,255,0.5);}
+#table3 tr:nth-child(odd){background-color: rgba(220, 220, 220,0.5);}
+
+#table3 tr:hover {background-color: #ffffff;}
+
+#table3 th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: rgba(143, 188, 143,0.7);
+  color: white;
+  font-size:1.5vw;
+  margin: 0 auto;
+}
+.containerTable1{
+  width: 35%;
+  height: 50%;
+  margin-left: 10%;
+  margin-top: 5%;
+  float:left;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.containerTable2{
+  width: 35%;
+  height: 50%;
+  margin-left: 10%;
+  margin-top: 5%;
+  float:left;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+table,td{
+  margin:0 auto;
+}
+input[type="checkbox"]{
+  display: none;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  display: none;
+  background: #fff;
+  width: 20%;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.container2{
+  display: none;
+  background: #fff;
+  width: 20%;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+.container2{
+  display: none;
+  background: #fff;
+  width: 20%;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+.container3{
+  display: none;
+  background: #fff;
+  width: 50%;
+  height: 50%;
+  padding: 2%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  max-height: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.container3::-webkit-scrollbar {
+  display: none;
+}
+
+.containerTable1::-webkit-scrollbar {
+  display: none;
+}
+
+.containerTable2::-webkit-scrollbar {
+  display: none;
+}
+
+#show:checked ~ .container{
+  display: block;
+}
+
+#show2:checked ~ .container2{
+  display: block;
+}
+
+#show3:checked ~ .container3{
+  display: block;
+}
+input{
+  width: 30%;
+  height: 15%;
+}
+
+
+.container .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.container2 .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.container3 .close-btn{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+.container .close-btn:hover{
+  color: #3498db;
+}
+
+.container2 .close-btn:hover{
+  color: #3498db;
+}
+.container3 .close-btn:hover{
+  color: #3498db;
+}
+.container .text{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container2 .text{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.container form .data{
+  height: 100%;
+  width: 100%;
+  margin:  5% 0;
+}
+
+.container2 form .data{
+  height: 100%;
+  width: 100%;
+  margin:  5% 0;
+}
+
+
+form .data label{
+  font-size: 1.5vw;
+}
+form .data input{
+  height: 100%;
+  width: 100%;
+  font-size: 1.5vw;
+}
+form .data input:focus{
+  border-color: #3498db;
+  border-bottom-width: 2px;
+}
+
+select {
+  position: relative;
+  font-family: Arial;
+  padding: 5px 8px;
+  color:#333333;
+  white-space: nowrap;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  cursor:pointer;
+  border-radius: 3px;
+  font-size:1.2vh;
+  height: 100%;
+}
+
+select:focus,
+select:hover{
+  outline:none;
+  border: 1px solid #bbbbbb;
 }

@@ -10,7 +10,7 @@ describe('TournamentPageComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TournamentPageComponent ]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

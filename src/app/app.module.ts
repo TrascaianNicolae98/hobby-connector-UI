@@ -26,6 +26,9 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import {TournamentPageComponent} from './components/tournament-page/tournament-page.component';
 import { ButtonComponent } from './shared/button/button.component';
 import {ChampionshipTournamentPageComponent} from "./components/championship-tournament-page/championship-tournament-page.component";
+import {GenericDataTableComponent} from './generic-data-table/generic-data-table.component';
+import {Table2Component} from './table2/table2.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import {ChampionshipTournamentPageComponent} from "./components/championship-tou
     TournamentPageComponent,
     UserProfileComponent,
     ButtonComponent,
-    ChampionshipTournamentPageComponent
+    ChampionshipTournamentPageComponent,
+    GenericDataTableComponent,
+    Table2Component
   ],
   imports: [
     BrowserModule,
@@ -55,6 +60,7 @@ import {ChampionshipTournamentPageComponent} from "./components/championship-tou
     MatInputModule,
     FontAwesomeModule,
     SocialLoginModule,
+    MatPaginatorModule,
   ],
   providers:  [
     {

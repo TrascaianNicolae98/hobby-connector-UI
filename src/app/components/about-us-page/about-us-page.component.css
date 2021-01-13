@@ -5,7 +5,7 @@
 /*------------------------------------------------*/
 .mat-button{
   display: inline-block;
-  font-size: 20px;
+  font-size: 2vh;
   background-color: transparent;
   border: solid 1px transparent;
   border-radius: 0;
@@ -27,7 +27,7 @@
   padding: 0 5px;
   flex: 1 1 auto;
   text-align: center;
-  overflow: auto; /*so that the background shows, no matter what*/
+  overflow: hidden; /*so that the background shows, no matter what*/
 }
 /*------------------------------------------------*/
 /*for the mat-card not overlay on t
@@ -35,28 +35,23 @@ he mat-toolbar*/
 mat-toolbar, div.cdk-overlay-container mat-card {
   z-index: 1001;
 }
-
 .mat-card#card-aboutUs {
   position: absolute;
   top: 40%;
   left: 1%;
   color: white;
-  font-size: 20px;
+  font-size: 1.5vw;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: justify;
   letter-spacing: 1px;
   animation: text1 3s 1;
-
 }
-
 .mat-card span{
   letter-spacing: 1px;
-  font-size: 30px;
+  font-size: 1.7vw;
   text-transform: uppercase;
   animation: text1 3s 1;
-
 }
-
 @keyframes text1 {
   0% {
     color: black;
@@ -70,13 +65,12 @@ mat-toolbar, div.cdk-overlay-container mat-card {
     letter-spacing: 1px;
     margin-bottom: -40px;
   }
-
 }
-
 .bg-aboutUs {
-  height: 77%;
+  height: 100%;
   width: 100%;
   background: url('tennis2.jpg') no-repeat center center/cover;
+
 }
 /*footer*/
 .footer{
@@ -84,6 +78,8 @@ mat-toolbar, div.cdk-overlay-container mat-card {
   height: 50px;
   text-align: center;
   justify-content: center;
-  font-size: 15px;
-
+  font-size: 1vw;
+  position: fixed;
+  bottom: 0;
+  background: lightgray;
 }

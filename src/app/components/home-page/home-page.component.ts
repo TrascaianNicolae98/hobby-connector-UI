@@ -29,4 +29,5 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['/championshipPage'])
   }
 
+
 }
