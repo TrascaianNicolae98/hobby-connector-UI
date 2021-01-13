@@ -4,6 +4,7 @@ import {FacilitiesService} from "../../service/facilities.service";
 import {Router} from '@angular/router';
 import {User} from '../../model/User';
 import {debuglog} from "util";
+import {SocialloginService} from '../../service/sociallogin.service';
 
 @Component({
   selector: 'app-facilities',
@@ -13,11 +14,9 @@ import {debuglog} from "util";
 export class FacilitiesComponent implements OnInit {
 
   public listOfHobbies: Hobby[];
-  private facilitiesService: FacilitiesService;
   private user: string;
 
-  constructor(fs: FacilitiesService,private router: Router) {
-    this.facilitiesService = fs;
+  constructor(private facilitiesService: FacilitiesService, private router: Router, private socialloginService: SocialloginService) {
     this.addHobby();
 
   }
@@ -25,9 +24,10 @@ export class FacilitiesComponent implements OnInit {
   }
 
   addHobby(): void{
-    this.user = localStorage.getItem('currentUser').valueOf();
-    this.facilitiesService.getHobbies().subscribe(  hobbiesList => {this.listOfHobbies = hobbiesList; debugger});
+    this.facilitiesService.getHobbies().subscribe(  hobbiesList => this.listOfHobbies = hobbiesList);
   }
+
+
 
   goToHomePage(event): void {
     this.router.navigate(['/homePage']);
@@ -42,7 +42,7 @@ export class FacilitiesComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   goToChampionshipPage(event): void{
-    this.router.navigate(['/championshipPage'])
+    this.router.navigate(['/championshipPage']);
   }
   goToTournamentPage(event) {
     this.router.navigate(['/tournamentPage']);

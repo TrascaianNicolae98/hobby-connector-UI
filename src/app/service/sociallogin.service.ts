@@ -6,13 +6,15 @@ import {LogIn} from '../model/LogIn';
 import {LoginResponse} from '../model/responses/LoginResponse';
 import {Router} from '@angular/router';
 import {User} from '../model/User';
+import {Hobby} from '../model/Hobby';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SocialloginService {
+  private httpHeaders = new HttpHeaders().set("Authorization", "logIn");
   private httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
+    headers: this.httpHeaders
   };
   private currentUser: User;
   constructor(private http: HttpClient,
@@ -41,7 +43,7 @@ export class SocialloginService {
   }
 
   public getJwt(): string {
-    return this.currentUser.getJwt();
+    return this.getCurrentUser().getJwt();
   }
 
   public saveUserInternally(id: number, name: string, phoneNo: string, email: string, jwt: string): void {
@@ -65,13 +67,20 @@ export class SocialloginService {
     });
   }
 
+  public verifyToken(googleUser: any): any{
+    // tslint:disable-next-line:no-debugger
+    debugger;
+    return this.http.post<any>('http://localhost:8080/api/loginWithGoogle', googleUser.getAuthResponse().id_token, this.httpOptions);
+  }
+
   public logInGoogle(googleUser: any): void {
     // tslint:disable-next-line:no-debugger
     debugger;
     // tslint:disable-next-line:no-debugger
-    this.http.post<any>('http://localhost:8080/api/loginWithGoogle', googleUser.getAuthResponse().id_token, this.httpOptions).subscribe( data => {
+    this.verifyToken(googleUser).subscribe( data => {debugger;
       this.saveUserInternally(data.id, data.fullname, data.phoneNo, data.email, data.jwt);
-      const ngZone = this.injector.get(NgZone);   // redirect won't work correctly unless we do this nonsense
+      // tslint:disable-next-line:no-debugger
+      const ngZone = this.injector.get(NgZone);    // redirect won't work correctly unless we do this nonsense
       ngZone.run(() => {
         this.router.navigate(['/homePage']);
       });

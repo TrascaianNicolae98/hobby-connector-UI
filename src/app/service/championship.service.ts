@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from "rxjs";
 import {Championship} from "../model/Championship";
 import {Router} from "@angular/router";
@@ -11,13 +11,17 @@ import {ChampionshipSlots} from "../model/ChampionshipSlots";
 })
 export class ChampionshipService {
 
-  private onClickChampionship : Championship
-  public championshipSlots:ChampionshipSlots;
+  private onClickChampionship : Championship;
+  public championshipSlots: ChampionshipSlots;
+  private httpHeaders = new HttpHeaders().set("Authorization", JSON.parse(localStorage.getItem('currentUser')).jwt);
+  private httpOptions = {
+    headers: this.httpHeaders
+  };
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   public getChampionships(): Observable<Array<Championship>>{
-    return this.http.get<Array<Championship>>('http://localhost:8080/api/championships');
+    return this.http.get<Array<Championship>>('http://localhost:8080/api/championships', this.httpOptions);
   }
 
   public onClickedChampionship(championshipList: Championship[], id: number, lista: number[]): void{

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpEvent, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {Hobby} from "../model/Hobby";
 import {Observable} from 'rxjs';
@@ -10,16 +10,17 @@ import {SocialloginService} from "./sociallogin.service";
   providedIn: 'root'
 })
 export class FacilitiesService {
+  private httpHeaders = new HttpHeaders().set("Authorization", JSON.parse(localStorage.getItem('currentUser')).jwt);
+  private httpOptions = {
+    headers: this.httpHeaders
+  };
 
-  constructor(private http: HttpClient,private loginService: SocialloginService) { }
+  constructor(private http: HttpClient) {
+  }
 
-  public getHobbies(): Observable<Array<Hobby>> {
-    debugger;
-    var headers_object = new HttpHeaders().set("Authorization", "Bearer " + this.loginService.getJwt());
-    let httpOptions = {
-      headers:headers_object
-    };
-    return this.http.get<Array<Hobby>>('http://localhost:8080/api/hobbies',httpOptions);
+
+  public getHobbies(): any {
+    return this.http.get<Array<Hobby>>('http://localhost:8080/api/hobbies', this.httpOptions);
   }
 
 }
