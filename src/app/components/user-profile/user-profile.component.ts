@@ -80,4 +80,15 @@ export class UserProfileComponent implements OnInit {
     this.loginService.saveUserInternally(user.getId(), this.userName, user.getPhoneNo(), this.userEmail, user.getJwt());
     location.reload();
   }
+
+  showReviews($event: MouseEvent) {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+  }
+
+  closeReviews($event: MouseEvent) {
+    const modal = document.getElementById("myModal");
+    const span = document.getElementsByClassName("close")[0];
+    modal.style.display = "none";
+  }
 }
