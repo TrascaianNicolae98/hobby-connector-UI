@@ -9,15 +9,14 @@ import {LoginResponse} from '../model/responses/LoginResponse';
 })
 export class SingUpService {
 
+  private httpHeaders = new HttpHeaders().set("Authorization", "singUp");
   private httpOptions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
+    headers: this.httpHeaders
   };
 
   constructor(private http: HttpClient) { }
 
   public signUp(singUp: SingUp): Observable<any> {
-    // tslint:disable-next-line:no-debugger
-    debugger;
     return this.http.post<any>('http://localhost:8080/api/signUp', singUp, this.httpOptions);
   }
 }

@@ -32,6 +32,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    FormsModule,
   ],
   providers:  [
     {
