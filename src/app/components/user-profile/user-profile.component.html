@@ -1,1 +1,165 @@
-<button (click)="logout()" class="btn btn-outline-success my-2 my-sm-0" >Logout</button>
+<body>
+  <!--header-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <mat-toolbar class="custom-toolbar">
+    <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+    <div class="spacer"></div>
+    <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
+    <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
+    <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
+    <a mat-button (click)="goToProfilePage($event)">
+      <mat-icon>person_outline</mat-icon>My Profile</a>
+  </mat-toolbar>
+
+  <!-------------------------------------->
+  <div class="user-container">
+
+    <div class="left">
+      <div class="circle" [ngStyle]="{'background-color': circleColor}">
+        {{initials}}
+      </div>
+
+      <h4>{{this.profileService.getUserName()}}</h4>
+      <p>{{this.profileService.getUserEmail()}}</p>
+      <div class="left-button">
+        <a mat-stroked-button (click)="logout($event)"> Logout </a>
+      </div>
+      <div class="left-button">
+        <!-- Trigger/Open The Modal -->
+        <a mat-stroked-button (click)="showReviews($event)"> Reviews </a>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close" (click)="closeReviews($event)">&times;</span>
+            <!--Rating Card-->
+            <div class="rating-content">
+            <span class="heading">{{this.profileService.getUserName()}}'s rating</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <p>4.1 average based on 254 reviews.</p>
+
+            <hr style="border:3px solid #f1f1f1">
+
+            <div class="row">
+              <div class="side">
+                <div>5 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-5"></div>
+                </div>
+              </div>
+              <div class="side rightReview">
+                <div>150</div>
+              </div>
+              <div class="side">
+                <div>4 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-4"></div>
+                </div>
+              </div>
+              <br>
+              <div class="side rightReview">
+                <div>63</div>
+              </div>
+              <div class="side">
+                <div>3 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-3"></div>
+                </div>
+              </div>
+              <br>
+              <div class="side rightReview">
+                <div>15</div>
+              </div>
+              <div class="side">
+                <div>2 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-2"></div>
+                </div>
+              </div>
+              <br>
+              <div class="side rightReview">
+                <div>6</div>
+              </div>
+              <div class="side">
+                <div>1 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-1"></div>
+                </div>
+              </div>
+              <br>
+              <div class="side rightReview">
+                <div>20</div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="right">
+       <div class="title"><h3>My account</h3></div>
+      <div class="container">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" [(ngModel)]="userName"  placeholder="{{userName}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="email">Email</label>
+            </div>
+            <div class="col-75">
+              <input type="email" id="email" name="email" [(ngModel)]="userEmail" placeholder="{{userEmail}}">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="number">Phone number</label>
+            </div>
+            <div class="col-75">
+              <input type="tel" id="number" name="phonenumber" [(ngModel)]="userPhoneNo" placeholder="{{userPhoneNo}}">
+            </div>
+          </div><div class="row">
+            <div class="col-25">
+              <label for="password">Password</label>
+            </div>
+            <div class="col-75">
+              <input type="password" id="password" name="password" [(ngModel)]="userPassword" placeholder="new password">
+            </div>
+          </div>
+
+    </div>
+      <div class="updateButton">
+        <a mat-stroked-button (click)="update($event)"> Update Info </a>
+      </div>
+    </div>
+  </div>
+  <!---------------------------------------------------------->
+  <footer>
+    <mat-toolbar>
+      <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
+    </mat-toolbar>
+  </footer>
+</body>

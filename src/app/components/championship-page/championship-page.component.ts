@@ -37,7 +37,9 @@ export class ChampionshipPageComponent implements OnInit {
   goToLoginPage(event): void {
     this.router.navigate(['/login']);
   }
-
+  goToProfilePage(event): void {
+    this.router.navigate(['/user-profile']);
+  }
 
   goToChampTour(event): void {
     this.lista.push(1);
