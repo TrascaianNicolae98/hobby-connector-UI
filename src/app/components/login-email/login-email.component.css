@@ -8,10 +8,12 @@ a:hover{
 }
 .close-button {
   float: right;
-  font-size: 3em;
+  font-size: 1em;
   right: 100px;
   top: 80px;
-  color: white;
+  color: black;
+  width: 35px;
+  height: 35px;
 }
 
 .content {
@@ -61,6 +63,9 @@ mat-form-field {
 input {
   margin-top: 5px;
   font-size: 1.2em;
+  padding-top:8px;
+  padding-bottom: 8px;
+  border: 1px solid black;
 }
 
 mat-form-field {
@@ -68,10 +73,8 @@ mat-form-field {
 }
 
 .forgot-password {
-  color: midnightblue;
-  margin-left: -190px;
-  font-family: raleway, sans-serif;
-  font-weight: bold;
+  padding: 20px 16px;
+  height: 0px;
 }
 
 .log-in-button {
@@ -79,7 +82,7 @@ mat-form-field {
   font-weight: bold;
   height: 50px;
   width: 300px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: teal;
   color: white;
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
+import {SocialloginService} from '../../service/sociallogin.service';
+import {ProfileService} from '../../service/profile.service';
 
 @Component({
   selector: 'app-tournament-page',

@@ -1,5 +1,5 @@
 <div>
-<a (click)="goToLoginPage($event)"><button mat-icon-button class="close-button">&#10006;</button></a>
+<a (click)="goToLoginPage($event)"><button mat-icon-button class="close-button">X</button></a>
 <div class="content">
   <h1 id="title">Log In</h1>
   <div>
@@ -24,7 +24,9 @@
       </label>
     </mat-form-field>
   </div>
-  <a (click)="goToForgotPasswordPage($event)" class="forgot-password">Forgot password?</a>
+  <div class="forgot-password">
+  <a  (click)="goToForgotPasswordPage($event)" class="forgot-password">Forgot password?</a>
+  </div>
   <br>
   <a (click)="logInAcc($event)"><button mat-flat-button class="log-in-button">Log In</button></a>
   <br>

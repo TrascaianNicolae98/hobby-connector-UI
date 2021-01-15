@@ -6,7 +6,7 @@
 /*------------------------------------------------*/
 .mat-button{
   display: inline-block;
-  font-size: 2vmin;
+  font-size: 2vh;
   background-color: transparent;
   border: solid 1px transparent;
   border-radius: 0;
@@ -28,8 +28,7 @@
   padding: 0 5px;
   flex: 1 1 auto;
   text-align: center;
-  overflow: auto; /*so that the background shows, no matter what*/
-  font-family: 'Josefin Sans';
+  overflow: hidden; /*so that the background shows, no matter what*/
 }
 /*------------------------------------------------*/
 * {
@@ -337,3 +336,24 @@ body{
     display: none;
   }
 }
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: #f1f1f1;
+  min-width: 6vw;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display:block;}

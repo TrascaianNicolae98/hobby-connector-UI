@@ -1,4 +1,5 @@
 <!--header-->
+
 <body>
 <mat-toolbar class="custom-toolbar">
   <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
@@ -6,8 +7,12 @@
   <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
   <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
   <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
-  <a mat-button (click)="goToLoginPage($event)">
-    <mat-icon>person_outline</mat-icon>My Profile</a>
+  <div class="dropdown">
+    <a mat-button (click)="goToLoginPage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
+    <div class="dropdown-content">
+      <a mat-button>Logout</a>
+    </div>
+  </div>
 </mat-toolbar><p></p>
 
 <!--body-->
@@ -161,8 +166,8 @@
 </div>
 <label class="button2">Enter Championship</label>
 
-
 </body>
+
 
 <!--footer-->
 <footer>
@@ -170,3 +175,4 @@
     <div class="footer"><p>&copy; 2020 Copyright:WILDCATS</p></div>
   </mat-toolbar>
 </footer>
+

@@ -13,41 +13,51 @@ a:hover{
 .close-button {
   float: right;
   font-size: 3em;
-  right: 100px;
-  top: 80px;
-  color: white;
+  right: 8%;
+  top: 5%;
+  color: black;
 }
 
 .content {
   top: calc(50% - 300px);
   box-sizing: content-box;
   margin: auto;
-  margin-top: 150px;
-  margin-right: 30%;
+  margin-top: 3%;
+  margin-right: 35%;
   width: 25%;
+  height:75%;
   border: 3px solid black;
   padding: 10px;
   text-align: center;
   background-color: white;
-  min-width: 400px;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
 
 #title {
   font: normal normal normal 24px/1.4em "Times New Roman",sans-serif;
   color: dimgrey;
-  font-size: 48px;
+  font-size: 6vh;
   line-height: .8em;
-  margin-top: 10px;
+  margin-top: 1%;
   padding-top: 0;
   padding-bottom: 0;
-  margin-bottom: 50px;
+  margin-bottom: 6%;
 }
 
 mat-form-field {
-  width: 300px;
+  width: 90%;
   font-family: "Times New Roman", sans-serif;
-  height: 90px;
+  height: 100%;
   line-height: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 mat-label {
@@ -55,22 +65,28 @@ mat-label {
 }
 
 input {
-  font-size: 1.2em;
+  font-size: 2vh;
+  border: 1px solid black;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .log-in-button {
   font-family: raleway, sans-serif;
   font-weight: bold;
-  height: 50px;
-  width: 300px;
-  margin-top: 20px;
+  font-size: 2vh;
+  height:15%;
+  text-align: center;
+  width: 80%;
+  padding: 1% 1%;
   background-color: grey;
   color: white;
+  line-height:0
 }
 
 .already-member {
   font-family: "Times New Roman", sans-serif;
-  font-size: 1.4em;
+  font-size: 3vh;
 }
 
 .log-in-link {

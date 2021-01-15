@@ -9,8 +9,12 @@
       <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
       <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
       <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
-      <a mat-button (click)="goToLoginPage($event)">
-        <mat-icon>person_outline</mat-icon>Login</a>
+      <div class="dropdown">
+        <a mat-button (click)="goToLoginPage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
+        <div class="dropdown-content">
+          <a mat-button>Logout</a>
+        </div>
+      </div>
     </mat-toolbar>
   </div>
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-
 @Component({
   selector: 'app-about-us-page',
   templateUrl: './about-us-page.component.html',
@@ -30,3 +29,5 @@ export class AboutUsPageComponent implements OnInit {
   }
 
 }
+
+
