@@ -3,6 +3,7 @@ import {FacilitiesService} from "../../service/facilities.service";
 import {Router} from "@angular/router";
 import {Championship} from "../../model/Championship";
 import {ChampionshipService} from "../../service/championship.service";
+import {SocialloginService} from "../../service/sociallogin.service";
 
 @Component({
   selector: 'app-championship-page',
@@ -14,7 +15,7 @@ export class ChampionshipPageComponent implements OnInit {
   public listOfChampionships: Championship[];
   public lista: number[] = [];
 
-  constructor(private championshipService: ChampionshipService,private router: Router) {
+  constructor(private championshipService: ChampionshipService, private router: Router, private loginService: SocialloginService) {
     this.addChampionship();
 
   }
@@ -38,7 +39,7 @@ export class ChampionshipPageComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   goToProfilePage(event): void {
-    this.router.navigate(['/user-profile']);
+    this.router.navigate(['/userProfile']);
   }
 
   goToChampTour(event): void {
@@ -59,5 +60,9 @@ export class ChampionshipPageComponent implements OnInit {
 
   public getService(): ChampionshipService{
     return this.championshipService;
+  }
+
+  logOut(event): void {
+    this.loginService.logout();
   }
 }

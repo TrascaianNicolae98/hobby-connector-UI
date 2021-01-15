@@ -5,12 +5,12 @@
 
   <div class="spacer"></div>
   <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
-  <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
+  <a mat-button > Facilities </a>
   <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
   <div class="dropdown">
-    <a mat-button (click)="goToLoginPage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
+    <a mat-button (click)="goToProfilePage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
     <div class="dropdown-content">
-      <a mat-button>Logout</a>
+      <a mat-button (click)="logOut($event)">Logout</a>
     </div>
   </div>
 </mat-toolbar>
@@ -21,7 +21,7 @@
   <ul class="facilities">
     <li>
       <div class="bg" style="background-image: url({{hobby.image1}});background-position: center " >
-        <button (click)="goToTournamentPage($event)" class="mat-button-facilities" > {{hobby.name}}</button>
+        <button (click)="goToTournamentPage($event)" class="mat-button-facilities" id="{{hobby.id}}"> {{hobby.name}}</button>
           </div>
     </li>
   </ul>

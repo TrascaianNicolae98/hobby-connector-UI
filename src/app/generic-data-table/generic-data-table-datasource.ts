@@ -3,21 +3,20 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import {User} from "../model/User";
+import {Player} from "../model/Player";
 
 // TODO: Replace this with your own data model type
 export interface GenericDataTableItem {
   name: string;
   id: number;
+  email: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: GenericDataTableItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Gold'}
+  {id: 1, name: 'George', email: 'a'},
+  {id: 2, name: 'Gicu', email: 'b'},
 ];
 
 /**
@@ -32,6 +31,10 @@ export class GenericDataTableDataSource extends DataSource<GenericDataTableItem>
 
   constructor() {
     super();
+  }
+
+  public addData(list): void{
+
   }
 
   /**
@@ -82,6 +85,7 @@ export class GenericDataTableDataSource extends DataSource<GenericDataTableItem>
       switch (this.sort.active) {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'email': return compare(+a.id, +b.id, isAsc);
         default: return 0;
       }
     });

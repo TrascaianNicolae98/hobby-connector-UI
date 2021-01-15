@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {SocialloginService} from '../../service/sociallogin.service';
 import {ProfileService} from '../../service/profile.service';
+import {FacilitiesService} from "../../service/facilities.service";
+import {Hobby} from "../../model/Hobby";
 
 @Component({
   selector: 'app-tournament-page',
@@ -10,7 +12,7 @@ import {ProfileService} from '../../service/profile.service';
 })
 export class TournamentPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private facilitiesService: FacilitiesService, private loginService: SocialloginService) { }
 
   ngOnInit(): void {
   }
@@ -38,6 +40,18 @@ export class TournamentPageComponent implements OnInit {
     const cell2 = row.insertCell(1);
     cell1.innerHTML = 'k';
     cell2.innerHTML = 'k';
+  }
+
+  getClickedHobby(): Hobby{
+    return this.facilitiesService.getClickedHobby();
+  }
+
+  goToProfilePage(event): void {
+    this.router.navigate(['/userProfile']);
+  }
+
+  logOut(event): void {
+    this.loginService.logout();
   }
 
 }

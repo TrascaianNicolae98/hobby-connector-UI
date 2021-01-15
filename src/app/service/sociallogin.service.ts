@@ -39,7 +39,7 @@ export class SocialloginService {
   public logout(): void {
     this.currentUser = null;
     localStorage.removeItem('currentUser');
-    location.reload();
+    this.router.navigate(['/aboutUsPage']);
   }
 
   public getJwt(): string {

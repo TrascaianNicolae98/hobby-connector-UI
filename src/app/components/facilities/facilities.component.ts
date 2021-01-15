@@ -16,7 +16,7 @@ export class FacilitiesComponent implements OnInit {
   public listOfHobbies: Hobby[];
   private user: string;
 
-  constructor(private facilitiesService: FacilitiesService, private router: Router, private socialloginService: SocialloginService) {
+  constructor(private facilitiesService: FacilitiesService, private router: Router, private loginService: SocialloginService) {
     this.addHobby();
 
   }
@@ -32,19 +32,23 @@ export class FacilitiesComponent implements OnInit {
   goToHomePage(event): void {
     this.router.navigate(['/homePage']);
   }
-  goToFacilitiesPage(event): void {
-    this.router.navigate(['/facilitiesPage']);
-  }
+
   goToAboutUsPage(event): void {
     this.router.navigate(['/aboutUsPage']);
   }
-  goToLoginPage(event): void {
-    this.router.navigate(['/login']);
-  }
+
   goToChampionshipPage(event): void{
     this.router.navigate(['/championshipPage']);
   }
-  goToTournamentPage(event) {
-    this.router.navigate(['/tournamentPage']);
+  goToTournamentPage(event): void {
+    this.facilitiesService.onClickedHobbyFunction(this.listOfHobbies, event.target.attributes.id.nodeValue);
+  }
+
+  goToProfilePage(event): void {
+    this.router.navigate(['/userProfile']);
+  }
+
+  logOut(event): void {
+    this.loginService.logout();
   }
 }

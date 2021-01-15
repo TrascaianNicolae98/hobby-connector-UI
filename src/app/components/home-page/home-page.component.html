@@ -3,16 +3,17 @@
 
   <div class="bg1" >
     <!--header-->
-    <mat-toolbar class="custom-toolbar" >
-      <a mat-button class="logo" (click)="goToHomePage($event)"><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+    <mat-toolbar class="custom-toolbar">
+      <a mat-button class="logo" ><mat-icon>account_tree</mat-icon>Hobby Connector</a>
+
       <div class="spacer"></div>
       <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
       <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
       <a mat-button (click)="goToChampionshipPage($event)"> Championship </a>
       <div class="dropdown">
-        <a mat-button (click)="goToLoginPage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
+        <a mat-button (click)="goToProfilePage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
         <div class="dropdown-content">
-          <a mat-button>Logout</a>
+          <a mat-button (click)="logOut($event)">Logout</a>
         </div>
       </div>
     </mat-toolbar>

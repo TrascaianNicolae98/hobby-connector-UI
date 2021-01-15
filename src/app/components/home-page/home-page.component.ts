@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {SocialloginService} from "../../service/sociallogin.service";
 
 @Component({
   selector: 'app-home-page',
@@ -8,13 +9,10 @@ import {Router} from '@angular/router';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private loginService: SocialloginService) {
   }
 
   ngOnInit(): void {
-  }
-  goToHomePage(event): void {
-    this.router.navigate(['/homePage']);
   }
   goToFacilitiesPage(event): void {
     this.router.navigate(['/facilitiesPage']);
@@ -26,8 +24,15 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['/login']);
   }
   goToChampionshipPage(event): void{
-    this.router.navigate(['/championshipPage'])
+    this.router.navigate(['/championshipPage']);
   }
 
 
+  goToProfilePage(event): void {
+    this.router.navigate(['/userProfile']);
+  }
+
+  logOut(event): void {
+    this.loginService.logout();
+  }
 }

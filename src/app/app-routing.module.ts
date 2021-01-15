@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/aboutUsPage', pathMatch: 'full' },
   {path: 'championshipPage', component: ChampionshipPageComponent, canActivate: [AuthGuard]},
   {path: 'tournamentPage', component: TournamentPageComponent, canActivate: [AuthGuard]},
-  {path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard]},
+  {path: 'userProfile', component: UserProfileComponent, canActivate: [AuthGuard]},
   {path: 'championshipTournament', component: ChampionshipTournamentPageComponent}
 
 ];
