@@ -107,6 +107,7 @@ he mat-toolbar*/
   box-shadow: #333333;
   text-decoration: none;
   font-size: 1vw;
+  cursor: pointer;
 }
 
 .table1 {
@@ -266,8 +267,8 @@ input[type="checkbox"]{
   padding: 30px;
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
   position: absolute;
-  top: 55%;
-  left: 65%;
+  top: 50%;
+  right:10%
 }
 
 .container2{
@@ -351,6 +352,13 @@ input{
   font-size: 1.2vw;
   cursor: pointer;
 }
+.container4 .close-btn{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
 .container .close-btn:hover{
   color: #3498db;
 }
@@ -359,6 +367,10 @@ input{
   color: #3498db;
 }
 .container3 .close-btn:hover{
+  color: #3498db;
+}
+
+.container4 .close-btn:hover{
   color: #3498db;
 }
 .container .text{
@@ -373,6 +385,11 @@ input{
   text-align: center;
 }
 
+.container3 .text{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
 
 .container form .data{
   height: 100%;
@@ -381,6 +398,12 @@ input{
 }
 
 .container2 form .data{
+  height: 100%;
+  width: 100%;
+  margin:  5% 0;
+}
+
+.container4 form .data{
   height: 100%;
   width: 100%;
   margin:  5% 0;
