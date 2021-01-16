@@ -9,7 +9,7 @@
     <div class="spacer"></div>
     <a mat-button (click)="goToAboutUsPage($event)"> About us </a>
     <a mat-button (click)="goToFacilitiesPage($event)"> Facilities </a>
-    <a mat-button href="#"> Championship </a>
+    <a mat-button > Championship </a>
     <div class="dropdown">
       <a mat-button (click)="goToLoginPage($event)"><mat-icon>person_outline</mat-icon>My Profile</a>
       <div class="dropdown-content">
@@ -17,11 +17,11 @@
       </div>
     </div>
   </mat-toolbar>
-  <h1>{{this.getClickedChampionShip().name}} Championships</h1>
+  <h1 style="text-align: center;font-size:2vw;margin-left:10%;-webkit-text-stroke: 0.2px white;">{{this.getClickedChampionShip().name}} Championship</h1>
 
 </div>
 
-<body>
+
 
 
 
@@ -70,11 +70,51 @@
     </div>
   </section>
 
+  <section class="round semifinals">
+    <div class="winners">
+      <div class="matchups">
+
+
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[0]}}</span></div>
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[1]}}</span></div>
+          </div>
+        </div>
+
+
+
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[2]}}</span></div>
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[3]}}</span></div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+  <section class="round finals">
+    <div class="winners">
+      <div class="matchups">
+
+        <div class="matchup">
+          <div class="participants">
+            <div class="participant winner"><span>{{this.getService().championshipSlots.lista[0]}}</span></div>
+            <div class="participant"><span>{{this.getService().championshipSlots.lista[1]}}</span></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
 </div>
 
-
-
-</body>
 
 <footer>
   <mat-toolbar>

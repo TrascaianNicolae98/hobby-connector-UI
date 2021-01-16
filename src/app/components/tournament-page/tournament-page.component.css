@@ -259,6 +259,17 @@ input[type="checkbox"]{
   left: 55%;
 }
 
+.container4{
+  display: none;
+  background: #fff;
+  width: 20%;
+  padding: 30px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 55%;
+  left: 65%;
+}
+
 .container2{
   display: none;
   background: #fff;
@@ -299,6 +310,10 @@ input[type="checkbox"]{
 }
 
 #show:checked ~ .container{
+  display: block;
+}
+
+#showw:checked ~ .container4{
   display: block;
 }
 
