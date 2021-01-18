@@ -24,7 +24,11 @@ export class ChampionshipService {
     return this.http.get<Array<Championship>>('http://localhost:8080/api/championships', this.httpOptions);
   }
 
-  public onClickedChampionship(championshipList: Championship[], id: number, lista: number[]): void{
+  public getChamTeams(): any{
+    debugger;
+    return this.http.post<any>("http://localhost:8080/api/teamsByChampionshipId",JSON.parse(localStorage.getItem('currentChampionship')).id,this.httpOptions);
+  }
+  public onClickedChampionship (championshipList: Championship[], id: number, lista: string[]): void{
     // tslint:disable-next-line:no-debugger
     debugger;
     for (let  i = 0; i<championshipList.length;i++)

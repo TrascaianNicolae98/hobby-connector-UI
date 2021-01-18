@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {Championship} from "../../model/Championship";
 import {ChampionshipService} from "../../service/championship.service";
 import {SocialloginService} from "../../service/sociallogin.service";
+import {TeamDto} from "../../model/TeamDto";
 
 @Component({
   selector: 'app-championship-page',
@@ -13,9 +14,18 @@ import {SocialloginService} from "../../service/sociallogin.service";
 export class ChampionshipPageComponent implements OnInit {
 
   public listOfChampionships: Championship[];
-  public lista: number[] = [];
+  public lista: string[] = [];
+  public teams: TeamDto[]=[];
 
   constructor(private championshipService: ChampionshipService, private router: Router, private loginService: SocialloginService) {
+    this.lista.push('1');
+    this.lista.push('2');
+    this.lista.push('3');
+    this.lista.push('4');
+    this.lista.push('5');
+    this.lista.push('6');
+    this.lista.push('7');
+    this.lista.push('8');
     this.addChampionship();
 
   }
@@ -43,19 +53,7 @@ export class ChampionshipPageComponent implements OnInit {
   }
 
   goToChampTour(event): void {
-    this.lista.push(1);
-    this.lista.push(2);
-    this.lista.push(3);
-    this.lista.push(4);
-    this.lista.push(5);
-    this.lista.push(6);
-    this.lista.push(7);
-    this.lista.push(8);
-
-
-    // tslint:disable-next-line:no-debugger
-    debugger;
-    this.championshipService.onClickedChampionship(this.listOfChampionships, event.target.attributes.id.nodeValue,this.lista);
+      this.championshipService.onClickedChampionship(this.listOfChampionships, event.target.attributes.id.nodeValue,this.lista);
   }
 
   public getService(): ChampionshipService{

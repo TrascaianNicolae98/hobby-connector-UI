@@ -21,10 +21,10 @@
 
 
 <div class="containerTable1">
-  <app-generic-data-table ></app-generic-data-table>
+  <app-generic-data-table [users]="this.tournamentUsers.getAmicalUsers()"></app-generic-data-table>
 </div>
 <div class="containerTable2">
-  <app-table2></app-table2>
+  <app-generic-data-table [users]="this.tournamentUsers.getChampionshipUsers()"></app-generic-data-table>
 </div>
 
 <input type="checkbox" id="show">
@@ -34,8 +34,12 @@
   <form>
     <div class="data">
       <label>Email:</label>
-      <input type="text" required></div>
-    <button class="button3">Send Email</button>
+      <mat-form-field appearance="fill">
+        <label>
+          <input type="text" required #emailBox
+             (keyup.enter)="emailSubAmical(emailBox.value)"
+             (blur)="emailSubAmical(emailBox.value)" matInput placeholder></label></mat-form-field></div>
+    <button (click)="amicalInvitation($event)" class="button3">Send invitation</button>
   </form>
 </div>
 
@@ -49,104 +53,25 @@
       <col style="width:50%">
       <col style="width:50%">
       <tr>
-        <th>Team1</th>
-        <th>Team2</th>
+        <th >Team1</th>
+        <th >Team2</th>
       </tr>
-      <TR>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
+      <TR *ngFor="let player of this.teamsUsersAmical;index as i">
+        <TD class = "select" *ngIf="i<(this.teamsUsersAmical.length-1)/2">
+          <select #t1 (change)="team1Call(t1.value)">
+            <option *ngFor="let user of this.teamsUsersAmical" [value]="user.value.getId()">
+              {{user.viewValue}}
+            </option>
           </select>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
+        </TD>
+
+        <TD  class = "select" *ngIf="i<(this.teamsUsersAmical.length-1)/2">
+          <select #t2 (change)="team2Call(t2.value)">
+            <option *ngFor="let user of this.teamsUsersAmical" [value]="user.value.getId()">
+              {{user.viewValue}}
+            </option>
           </select>
-      </TR>
-      <TR>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-      </TR>
-      <TR>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-      </TR>
-      <TR>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-      </TR>
-      <TR>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-      </TR>
-      <TR>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
-        <TD class = "select">
-          <select>
-            <option value="1">Player1</option>
-            <option value="2">Player2</option>
-            <option value="3">Player3</option>
-            <option value="4">Player4</option>
-          </select>
+        </TD>
       </TR>
     </table>
 
@@ -160,8 +85,12 @@
   <form>
     <div class="data">
       <label>Email:</label>
-      <input type="text" required></div>
-    <button class="button3">Send Email</button>
+      <mat-form-field appearance="fill">
+        <label>
+          <input type="text" required #emailBox2
+                 (keyup.enter)="emailSubChamp(emailBox2.value)"
+                 (blur)="emailSubChamp(emailBox2.value)" matInput placeholder></label></mat-form-field></div>
+    <button (click)="championshipInvitation($event)" class="button3">Send invitation</button>
   </form>
 </div>
 
@@ -172,8 +101,10 @@
     <form>
       <div class="data">
         <label>The name of the team:</label>
-        <input type="text" required></div>
-      <button class="button3">Submit</button>
+        <input type="text" required #teamNameBox
+               (keyup.enter)="teamNeamSub(teamNameBox.value)"
+               (blur)="teamNeamSub(teamNameBox.value)" matInput placeholder></div>
+        <button (click)="submitTeamChamp($event)" class="button3">Submit</button>
     </form>
   </div>
 

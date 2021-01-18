@@ -64,6 +64,15 @@ he mat-toolbar*/
   bottom: 0;
 }
 
+mat-form-field {
+  width: 90%;
+  font-family: "Times New Roman", sans-serif;
+  height: 100%;
+  line-height: 0;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
 .button1 {
   cursor: pointer;
   background-color: rgba(143, 188, 143,0.9);
@@ -237,6 +246,7 @@ table,td{
 }
 input[type="checkbox"]{
   display: none;
+
 }
 .container{
   position: absolute;
@@ -328,6 +338,7 @@ input[type="checkbox"]{
 input{
   width: 30%;
   height: 15%;
+  border: 1px solid black;
 }
 
 

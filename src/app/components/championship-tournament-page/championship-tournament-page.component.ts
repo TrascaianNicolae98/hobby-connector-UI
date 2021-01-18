@@ -18,6 +18,7 @@ export class ChampionshipTournamentPageComponent implements OnInit {
   constructor(private router: Router, private championshipService:ChampionshipService) { this.nr=8;}
 
   ngOnInit(): void {
+
   }
   goToHomePage(event): void {
     this.router.navigate(['/homePage']);

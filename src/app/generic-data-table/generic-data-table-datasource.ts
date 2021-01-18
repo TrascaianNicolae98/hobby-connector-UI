@@ -5,6 +5,9 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 import {User} from "../model/User";
 import {Player} from "../model/Player";
+import {FacilitiesService} from "../service/facilities.service";
+import {TemporaryTeamUserDto} from "../model/TemporaryTeamUserDto";
+import {Input} from "@angular/core";
 
 // TODO: Replace this with your own data model type
 export interface GenericDataTableItem {
@@ -14,10 +17,7 @@ export interface GenericDataTableItem {
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: GenericDataTableItem[] = [
-  {id: 1, name: 'George', email: 'a'},
-  {id: 2, name: 'Gicu', email: 'b'},
-];
+
 
 /**
  * Data source for the GenericDataTable view. This class should
@@ -25,12 +25,16 @@ const EXAMPLE_DATA: GenericDataTableItem[] = [
  * (including sorting, pagination, and filtering).
  */
 export class GenericDataTableDataSource extends DataSource<GenericDataTableItem> {
-  data: GenericDataTableItem[] = EXAMPLE_DATA;
+  data: GenericDataTableItem[]=[];
   paginator: MatPaginator;
   sort: MatSort;
-
-  constructor() {
+  constructor(facilitiesService: FacilitiesService, users: any) {
     super();
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    this.data.push({id: 1, name:user.name, email: user.email })
+    for (let i=1;i<=users.length;i++){
+      this.data.push({id: i+1, name: users[i-1].getFullName(), email: users[i-1].getEmail()});
+    }
   }
 
   public addData(list): void{

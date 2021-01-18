@@ -1,4 +1,4 @@
-import {Team} from "./Team";
+import {TeamDto} from "./TeamDto";
 
 
 export class Championship {
@@ -6,7 +6,7 @@ export class Championship {
   private _name: string;
   private _image1: string;
   private _image2: string;
-  private _listOfTeams: Team[]
+  private _listOfTeams: TeamDto[]
 
   constructor() {
   }
@@ -44,12 +44,12 @@ export class Championship {
     this._image2 = value;
   }
 
-  get listOfTeams(): Team[] {
+  get listOfTeams(): TeamDto[] {
     return this._listOfTeams;
   }
 
 
-  set listOfTeams(value: Team[]) {
+  set listOfTeams(value: TeamDto[]) {
     this._listOfTeams = value;
   }
 }

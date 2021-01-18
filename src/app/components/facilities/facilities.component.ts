@@ -21,6 +21,7 @@ export class FacilitiesComponent implements OnInit {
 
   }
   ngOnInit(): void {
+
   }
 
   addHobby(): void{
@@ -41,6 +42,7 @@ export class FacilitiesComponent implements OnInit {
     this.router.navigate(['/championshipPage']);
   }
   goToTournamentPage(event): void {
+    localStorage.setItem("facilitiesEvent",JSON.stringify(event.target.attributes.id.nodeValue));
     this.facilitiesService.onClickedHobbyFunction(this.listOfHobbies, event.target.attributes.id.nodeValue);
   }
 

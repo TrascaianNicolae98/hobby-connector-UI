@@ -1,8 +1,8 @@
 export class ChampionshipSlots {
-  public lista:number[];
+  public lista:string[];
 
 
-  constructor(lista: number[]) {
+  constructor(lista: string[]) {
     this.lista = lista;
   }
 }
